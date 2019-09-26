@@ -33,7 +33,7 @@ presubmits:
         name: ""
         securityContext:
           privileged: true
-    trigger: '(?m)^/test (?:.*? )?lint(?: .*?)?$'
+    trigger: '(?m)^/test (?:.*? )?check(?: .*?)?$'
   - always_run: true
     branches:
     - ^master$
