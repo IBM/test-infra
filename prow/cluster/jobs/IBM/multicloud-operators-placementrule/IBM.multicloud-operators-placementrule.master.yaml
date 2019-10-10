@@ -6,7 +6,7 @@ presubmits:
     decorate: true
     always_run: true
     path_alias: github.com/IBM/multicloud-operators-placementrule
-    rerun_command: /test build_multicloud-operators-placementrule
+    rerun_command: /test build multicloud-operators-placementrule
     spec:
       containers:
       - command:
