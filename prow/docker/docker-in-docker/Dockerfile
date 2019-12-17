@@ -1,7 +1,7 @@
 FROM ubuntu:xenial
 
 # Installing
-COPY docker-tools/install.sh /tmp/tools/
+COPY install.sh /tmp/tools/
 RUN chmod -R +x /tmp/tools/install.sh
 RUN /tmp/tools/install.sh && rm -rf /tmp/tools
 
@@ -12,7 +12,7 @@ EXPOSE 2375
 ENV PATH /usr/local/go/bin:/home/go/bin:/usr/lib/google-cloud-sdk/bin:${PATH}
 
 # COPY entrypoint to start docker
-COPY docker-tools/prow-runner.sh /usr/local/bin/entrypoint
+COPY prow-runner.sh /usr/local/bin/entrypoint
 RUN chmod +rx /usr/local/bin/entrypoint
 
 # Set CI variable which can be checked by test scripts to verify
