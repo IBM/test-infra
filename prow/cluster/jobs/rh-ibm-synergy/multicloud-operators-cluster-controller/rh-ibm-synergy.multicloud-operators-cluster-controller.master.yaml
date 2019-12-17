@@ -7,7 +7,7 @@ presets:
     secret:
       secretName: ssh-secret
 - volumeMounts:
-   - mountPath: /home/ssh/ssh-secret
+   - mountPath: /home/ssh
       name: ssh-keys-ssh-secret
       readOnly: true
 
