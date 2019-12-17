@@ -2,7 +2,7 @@ presubmits:
 
 postsubmits:
   multicloudlab/tools:
-    - name: tools-images
+    - name: multicloudlab-create-build-tool-images
       decorate: true
       branches:
         - ^master$
