@@ -7,9 +7,9 @@ presets:
     secret:
       secretName: ssh-secret
 - volumeMounts:
-   - mountPath: /home/ssh
-      name: ssh-keys-ssh-secret
-      readOnly: true
+  - mountPath: /home/ssh
+    name: ssh-keys-ssh-secret
+    readOnly: true
 
 presubmits:
   rh-ibm-synergy/multicloud-operators-cluster-controller:
