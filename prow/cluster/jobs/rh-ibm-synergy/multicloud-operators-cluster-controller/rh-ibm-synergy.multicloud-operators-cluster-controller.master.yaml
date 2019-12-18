@@ -150,10 +150,9 @@ postsubmits:
       - ssh-secret
     labels:
       preset-private-repo: "true"
+      preset-service-account: "true"
     clone_uri: "git@github.com:rh-ibm-synergy/multicloud-operators-cluster-controller.git"
     path_alias: github.ibm.com/IBMPrivateCloud/multicloud-operators-cluster-controller
-    labels:
-      preset-service-account: "true"
     spec:
       containers:
       - command:
