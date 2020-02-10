@@ -1,12 +1,12 @@
 presubmits:
-  ibm/go-repo-template:
+  IBM/go-repo-template:
   - name: check-go-repo-template
     cluster: default
     always_run: true
     branches:
     - ^master$
     decorate: true
-    path_alias: github.com/ibm/go-repo-template
+    path_alias: github.com/IBM/go-repo-template
     rerun_command: /test check-go-repo-template
     spec:
       containers:
@@ -24,7 +24,7 @@ presubmits:
     branches:
     - ^master$
     decorate: true
-    path_alias: github.com/ibm/go-repo-template
+    path_alias: github.com/IBM/go-repo-template
     rerun_command: /test test-go-repo-template
     spec:
       containers:
@@ -42,7 +42,7 @@ presubmits:
     branches:
     - ^master$
     decorate: true
-    path_alias: github.com/ibm/go-repo-template
+    path_alias: github.com/IBM/go-repo-template
     rerun_command: /test build-go-repo-template
     spec:
       containers:
@@ -55,13 +55,13 @@ presubmits:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?build(?:.*?)?$'
 postsubmits:
-  ibm/go-repo-template:
+  IBM/go-repo-template:
   - name: check-go-repo-template-postsubmit
     cluster: default
     branches:
     - ^master$
     decorate: true
-    path_alias: github.com/ibm/go-repo-template
+    path_alias: github.com/IBM/go-repo-template
     spec:
       containers:
       - command:
@@ -76,7 +76,7 @@ postsubmits:
     branches:
     - ^master$
     decorate: true
-    path_alias: github.com/ibm/go-repo-template
+    path_alias: github.com/IBM/go-repo-template
     spec:
       containers:
       - command:
@@ -91,7 +91,7 @@ postsubmits:
     branches:
     - ^master$
     decorate: true
-    path_alias: github.com/ibm/go-repo-template
+    path_alias: github.com/IBM/go-repo-template
     spec:
       containers:
       - command:
@@ -112,7 +112,7 @@ postsubmits:
     branches:
     - ^master$
     decorate: true
-    path_alias: github.com/ibm/go-repo-template
+    path_alias: github.com/IBM/go-repo-template
     spec:
       containers:
       - command:
@@ -132,7 +132,7 @@ postsubmits:
       - ssh-secret
     labels:
       preset-service-account: "true"
-    path_alias: github.com/ibm/go-repo-template
+    path_alias: github.com/IBM/go-repo-template
     spec:
       containers:
       - command:
