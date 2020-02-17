@@ -36,9 +36,9 @@ tide:
     IBM/ibm-metering-operator: squash
     IBM/ibm-mongodb-operator: squash
     IBM/ibm-mt-grqenforcer-operator: squash
-    IBM/management-ingress-operator: squad
+    IBM/management-ingress-operator: squash
     IBM/meta-operator: squash
-    IBM/ingress-nginx-operator: squad
+    IBM/ingress-nginx-operator: squash
     IBM/multicloud-operators-subscription-release: squash
     IBM/multicloud-operators-policy-controller: squash
     IBM/multicloud-operators-placementrule: squash
