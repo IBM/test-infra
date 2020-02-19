@@ -49,7 +49,7 @@ plugins:
   - assign
   - blunderbuss
   - cat
-  - doc
+  - dog
   - golint
   - heart
   - help
