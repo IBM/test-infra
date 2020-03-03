@@ -31,9 +31,7 @@ plugins:
   - lgtm
   - lifecycle
   - milestone
-  - milestoneapplier
   - milestonestatus
-  - needs-rebase
   - override
   - owners-label
   - pony
