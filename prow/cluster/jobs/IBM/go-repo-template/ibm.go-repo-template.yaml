@@ -133,6 +133,7 @@ presubmits:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?build(?:.*?)?$'
 postsubmits:
+  IBM/go-repo-template:
   - name: coverage-go-repo-template-postsubmit
     cluster: default
     branches:
