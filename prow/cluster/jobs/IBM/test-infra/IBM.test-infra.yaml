@@ -10,14 +10,14 @@ postsubmits:
     run_if_changed: 'prow/docker/check-tool/*'
     spec:
       containers:
-        - image: quay.io/multicloudlab/multicloudlab-builder-amd64:v20200228-42746cb02
-          command:
-          - entrypoint
-          - make
-          - check-tool-image
-          securityContext:
-            privileged: true
-  - mame: build-tool-image-amd64-postsubmit
+      - image: quay.io/multicloudlab/multicloudlab-builder-amd64:v20200228-42746cb02
+        command:
+        - entrypoint
+        - make
+        - check-tool-image
+        securityContext:
+          privileged: true
+  - name: build-tool-image-amd64-postsubmit
     cluster: default
     decorate: true
     labels:
@@ -27,14 +27,14 @@ postsubmits:
     run_if_changed: 'prow/docker/build-tool/*'
     spec:
       containers:
-        - image: quay.io/multicloudlab/multicloudlab-builder-amd64:v20200228-42746cb02
-          command:
-          - entrypoint
-          - make
-          - build-tool-image
-          securityContext:
-            privileged: true
-  - mame: build-tool-image-ppc64le-postsubmit
+      - image: quay.io/multicloudlab/multicloudlab-builder-amd64:v20200228-42746cb02
+        command:
+        - entrypoint
+        - make
+        - build-tool-image
+        securityContext:
+          privileged: true
+  - name: build-tool-image-ppc64le-postsubmit
     cluster: ppc64le
     decorate: true
     labels:
@@ -44,14 +44,14 @@ postsubmits:
     run_if_changed: 'prow/docker/build-tool/*'
     spec:
       containers:
-        - image: quay.io/multicloudlab/multicloudlab-builder-ppc64le:v20200228-42746cb02
-          command:
-          - entrypoint
-          - make
-          - build-tool-image
-          securityContext:
-            privileged: true
-  - mame: build-tool-image-s390x-postsubmit
+      - image: quay.io/multicloudlab/multicloudlab-builder-ppc64le:v20200228-42746cb02
+        command:
+        - entrypoint
+        - make
+        - build-tool-image
+        securityContext:
+          privileged: true
+  - name: build-tool-image-s390x-postsubmit
     cluster: s390x
     decorate: true
     labels:
@@ -61,13 +61,13 @@ postsubmits:
     run_if_changed: 'prow/docker/build-tool/*'
     spec:
       containers:
-        - image: quay.io/multicloudlab/multicloudlab-builder-s390x:v20200228-42746cb02
-          command:
-          - entrypoint
-          - make
-          - build-tool-image
-          securityContext:
-            privileged: true
+      - image: quay.io/multicloudlab/multicloudlab-builder-s390x:v20200228-42746cb02
+        command:
+        - entrypoint
+        - make
+        - build-tool-image
+        securityContext:
+          privileged: true
   - name: build-tool-multiarch-image-postsubmit
     cluster: default
     decorate: true
