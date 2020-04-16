@@ -4,7 +4,7 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     rerun_command: /test check-operand-deployment-lifecycle-manager
@@ -22,7 +22,7 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     rerun_command: /test test-operand-deployment-lifecycle-manager-amd64
@@ -41,7 +41,7 @@ presubmits:
     cluster: ppc64le
     always_run: true
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     rerun_command: /test test-operand-deployment-lifecycle-manager-ppc64le
@@ -60,7 +60,7 @@ presubmits:
     cluster: s390x
     always_run: true
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     rerun_command: /test test-operand-deployment-lifecycle-manager-s390x
@@ -79,7 +79,7 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     rerun_command: /test build-operand-deployment-lifecycle-manager-amd64
@@ -98,7 +98,7 @@ presubmits:
     cluster: ppc64le
     always_run: true
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     rerun_command: /test build-operand-deployment-lifecycle-manager-ppc64le
@@ -117,7 +117,7 @@ presubmits:
     cluster: s390x
     always_run: true
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     rerun_command: /test build-operand-deployment-lifecycle-manager-s390x
@@ -137,7 +137,7 @@ postsubmits:
   - name: coverage-operand-deployment-lifecycle-manager-postsubmit
     cluster: default
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     spec:
@@ -158,7 +158,7 @@ postsubmits:
   - name: build-operand-deployment-lifecycle-manager-amd64-postsubmit
     cluster: default
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     spec:
@@ -174,7 +174,7 @@ postsubmits:
   - name: build-operand-deployment-lifecycle-manager-ppc64le-postsubmit
     cluster: ppc64le
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     spec:
@@ -190,7 +190,7 @@ postsubmits:
   - name: build-operand-deployment-lifecycle-manager-s390x-postsubmit
     cluster: s390x
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     path_alias: github.com/IBM/operand-deployment-lifecycle-manager
     spec:
@@ -206,7 +206,7 @@ postsubmits:
   - name: image-operand-deployment-lifecycle-manager-amd64-postsubmit
     cluster: default
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -224,7 +224,7 @@ postsubmits:
   - name: image-operand-deployment-lifecycle-manager-ppc64le-postsubmit
     cluster: ppc64le
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -242,7 +242,7 @@ postsubmits:
   - name: image-operand-deployment-lifecycle-manager-s390x-postsubmit
     cluster: s390x
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -260,7 +260,7 @@ postsubmits:
   - name: multiarch-image-operand-deployment-lifecycle-manager-postsubmit
     cluster: default
     branches:
-    - ^master$
+    - ^release-1.1$
     decorate: true
     labels:
       preset-service-account: "true"
