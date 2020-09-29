@@ -4,6 +4,7 @@ presubmits:
     cluster: default
     branches:
     - ^master$
+    - ^development$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-licensing-operator
@@ -22,6 +23,7 @@ presubmits:
     cluster: default
     branches:
     - ^master$
+    - ^development$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-licensing-operator
@@ -41,6 +43,7 @@ presubmits:
     cluster: ppc64le
     branches:
     - ^master$
+    - ^development$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-licensing-operator
@@ -60,6 +63,7 @@ presubmits:
     cluster: s390x
     branches:
     - ^master$
+    - ^development$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-licensing-operator
@@ -79,6 +83,7 @@ presubmits:
     cluster: default
     branches:
     - ^master$
+    - ^development$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-licensing-operator
@@ -98,6 +103,7 @@ presubmits:
     cluster: ppc64le
     branches:
     - ^master$
+    - ^development$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-licensing-operator
@@ -117,6 +123,7 @@ presubmits:
     cluster: s390x
     branches:
     - ^master$
+    - ^development$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-licensing-operator
@@ -137,6 +144,7 @@ postsubmits:
   - name: coverage-ibm-licensing-operator-postsubmit
     branches:
     - ^master$
+    - ^development$
     decorate: true
     path_alias: github.com/IBM/ibm-licensing-operator
     spec:
@@ -158,6 +166,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
+    - ^development$
     decorate: true
     path_alias: github.com/IBM/ibm-licensing-operator
     spec:
@@ -174,6 +183,7 @@ postsubmits:
     cluster: ppc64le
     branches:
     - ^master$
+    - ^development$
     decorate: true
     path_alias: github.com/IBM/ibm-licensing-operator
     spec:
@@ -190,6 +200,7 @@ postsubmits:
     cluster: s390x
     branches:
     - ^master$
+    - ^development$
     decorate: true
     path_alias: github.com/IBM/ibm-licensing-operator
     spec:
@@ -270,6 +281,78 @@ postsubmits:
         - entrypoint
         - make
         - multiarch-image
+        image: quay.io/multicloudlab/build-tool:v20200817-b1f2b4c05
+        name: ""
+        securityContext:
+          privileged: true
+  - name: image-ibm-licensing-operator-development-amd64-postsubmit
+    cluster: default
+    branches:
+    - ^development$
+    decorate: true
+    path_alias: github.com/IBM/ibm-licensing-operator
+    labels:
+      preset-service-account: "true"
+    spec:
+      containers:
+      - command:
+        - entrypoint
+        - make
+        - build-push-image-development
+        image: quay.io/multicloudlab/build-tool:v20200817-b1f2b4c05
+        name: ""
+        securityContext:
+          privileged: true
+  - name: image-ibm-licensing-operator-development-ppc64le-postsubmit
+    cluster: ppc64le
+    branches:
+    - ^development$
+    decorate: true
+    path_alias: github.com/IBM/ibm-licensing-operator
+    labels:
+      preset-service-account: "true"
+    spec:
+      containers:
+      - command:
+        - entrypoint
+        - make
+        - build-push-image-development
+        image: quay.io/multicloudlab/build-tool:v20200817-b1f2b4c05
+        name: ""
+        securityContext:
+          privileged: true
+  - name: image-ibm-licensing-operator-development-s390x-postsubmit
+    cluster: s390x
+    branches:
+    - ^development$
+    decorate: true
+    path_alias: github.com/IBM/ibm-licensing-operator
+    labels:
+      preset-service-account: "true"
+    spec:
+      containers:
+      - command:
+        - entrypoint
+        - make
+        - build-push-image-development
+        image: quay.io/multicloudlab/build-tool:v20200817-b1f2b4c05
+        name: ""
+        securityContext:
+          privileged: true
+  - name: multiarch-image-ibm-licensing-development-postsubmit
+    cluster: default
+    branches:
+    - ^development$
+    decorate: true
+    labels:
+      preset-service-account: "true"
+    path_alias: github.com/IBM/operand-deployment-lifecycle-manager
+    spec:
+      containers:
+      - command:
+        - entrypoint
+        - make
+        - multiarch-image-development
         image: quay.io/multicloudlab/build-tool:v20200817-b1f2b4c05
         name: ""
         securityContext:
