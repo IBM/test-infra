@@ -7,7 +7,7 @@ presubmits:
     - ^master$
     decorate: true
     path_alias: github.com/IBM/ibm-elastic-stack-operator
-    rerun_command: /test ibm-elastic-stack-operator
+    rerun_command: /test check-ibm-elastic-stack-operator
     spec:
       containers:
       - command:
