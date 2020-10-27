@@ -93,6 +93,7 @@ postsubmits:
     spec:
       containers:
       - command:
+        - entrypoint
         - make
         - coverage
         image: quay.io/multicloudlab/build-tool:v20200817-b1f2b4c05
