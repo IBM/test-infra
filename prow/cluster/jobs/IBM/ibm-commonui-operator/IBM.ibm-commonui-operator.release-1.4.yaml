@@ -87,7 +87,7 @@ postsubmits:
           privileged: true
   - name: coverage_ibm-commonui-operator_postsubmit
     branches:
-    - ^master$
+    - ^release-1.4$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     spec:
@@ -107,7 +107,7 @@ postsubmits:
           privileged: true
   - name: build_ibm-commonui-operator_postsubmit
     branches:
-    - ^master$
+    - ^release-1.4$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     spec:
@@ -122,7 +122,7 @@ postsubmits:
           privileged: true
   - name: images_ibm-commonui-operator_postsubmit
     branches:
-    - ^master$
+    - ^release-1.4$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     labels:
