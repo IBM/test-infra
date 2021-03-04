@@ -1,12 +1,12 @@
 presubmits:
-  IBM/ibm-mongodb-operator:
-  - name: build_ibm-mongodb-operator
+  IBM/ibm-iam-policy-operator:
+  - name: build_ibm-iam-policy-operator
     branches:
-    - ^release-1.2$
+    - ^master$
     decorate: true
     always_run: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
-    rerun_command: /test build ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-iam-policy-operator
+    rerun_command: /test build ibm-iam-policy-operator
     spec:
       containers:
       - command:
@@ -18,13 +18,13 @@ presubmits:
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
-  - name: check_ibm-mongodb-operator
+  - name: check_ibm-iam-policy-operator
     branches:
-    - ^release-1.2$
+    - ^master$
     decorate: true
     always_run: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
-    rerun_command: /test check ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-iam-policy-operator
+    rerun_command: /test check ibm-iam-policy-operator
     spec:
       containers:
       - command:
@@ -35,13 +35,13 @@ presubmits:
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?check(?: .*?)?$'
-  - name: test_ibm-mongodb-operator
+  - name: test_ibm-iam-policy-operator
     branches:
-    - ^release-1.2$
+    - ^master$
     decorate: true
     always_run: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
-    rerun_command: /test test ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-iam-policy-operator
+    rerun_command: /test test ibm-iam-policy-operator
     spec:
       containers:
       - command:
@@ -55,12 +55,12 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?test(?: .*?)?$'
 
 postsubmits:
-  IBM/ibm-mongodb-operator:
-  - name: check_ibm-mongodb-operator_postsubmit
+  IBM/ibm-iam-policy-operator:
+  - name: check_ibm-iam-policy-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^master$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-iam-policy-operator
     spec:
       containers:
       - command:
@@ -70,11 +70,11 @@ postsubmits:
         name: ""
         securityContext:
           privileged: true
-  - name: test_ibm-mongodb-operator_postsubmit
+  - name: test_ibm-iam-policy-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^master$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-iam-policy-operator
     spec:
       containers:
       - command:
@@ -85,31 +85,32 @@ postsubmits:
         name: ""
         securityContext:
           privileged: true
-  - name: coverage_ibm-mongodb-operator_postsubmit
+  - name: coverage_ibm-iam-policy-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^master$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-iam-policy-operator
     spec:
       containers:
       - command:
+        - entrypoint
         - make
         - coverage
-        image: quay.io/multicloudlab/check-tool:v20201130-d61b998b6
+        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
         name: ""
         env:
         - name: CODECOV_TOKEN
           valueFrom:
             secretKeyRef:
-              name: ibm-mongodb-operator-codecov-token
+              name: ibm-iam-policy-operator-codecov-token
               key: codecov-token
         securityContext:
           privileged: true
-  - name: build_ibm-mongodb-operator_postsubmit
+  - name: build_ibm-iam-policy-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^master$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-iam-policy-operator
     spec:
       containers:
       - command:
@@ -120,11 +121,11 @@ postsubmits:
         name: ""
         securityContext:
           privileged: true
-  - name: images_ibm-mongodb-operator_postsubmit
+  - name: images_ibm-iam-policy-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^master$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-iam-policy-operator
     labels:
       preset-service-account: "true"
     spec:

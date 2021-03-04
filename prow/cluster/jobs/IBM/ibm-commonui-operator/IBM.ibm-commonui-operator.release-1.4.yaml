@@ -1,12 +1,12 @@
 presubmits:
-  IBM/ibm-mongodb-operator:
-  - name: build_ibm-mongodb-operator
+  IBM/ibm-commonui-operator:
+  - name: build_ibm-commonui-operator
     branches:
-    - ^release-1.2$
+    - ^release-1.4$
     decorate: true
     always_run: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
-    rerun_command: /test build ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-commonui-operator
+    rerun_command: /test build ibm-commonui-operator
     spec:
       containers:
       - command:
@@ -18,13 +18,13 @@ presubmits:
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
-  - name: check_ibm-mongodb-operator
+  - name: check_ibm-commonui-operator
     branches:
-    - ^release-1.2$
+    - ^release-1.4$
     decorate: true
     always_run: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
-    rerun_command: /test check ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-commonui-operator
+    rerun_command: /test check ibm-commonui-operator
     spec:
       containers:
       - command:
@@ -35,13 +35,13 @@ presubmits:
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?check(?: .*?)?$'
-  - name: test_ibm-mongodb-operator
+  - name: test_ibm-commonui-operator
     branches:
-    - ^release-1.2$
+    - ^release-1.4$
     decorate: true
     always_run: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
-    rerun_command: /test test ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-commonui-operator
+    rerun_command: /test test ibm-commonui-operator
     spec:
       containers:
       - command:
@@ -55,12 +55,12 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?test(?: .*?)?$'
 
 postsubmits:
-  IBM/ibm-mongodb-operator:
-  - name: check_ibm-mongodb-operator_postsubmit
+  IBM/ibm-commonui-operator:
+  - name: check_ibm-commonui-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^release-1.4$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-commonui-operator
     spec:
       containers:
       - command:
@@ -70,11 +70,11 @@ postsubmits:
         name: ""
         securityContext:
           privileged: true
-  - name: test_ibm-mongodb-operator_postsubmit
+  - name: test_ibm-commonui-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^release-1.4$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-commonui-operator
     spec:
       containers:
       - command:
@@ -85,11 +85,11 @@ postsubmits:
         name: ""
         securityContext:
           privileged: true
-  - name: coverage_ibm-mongodb-operator_postsubmit
+  - name: coverage_ibm-commonui-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^release-1.4$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-commonui-operator
     spec:
       containers:
       - command:
@@ -101,15 +101,15 @@ postsubmits:
         - name: CODECOV_TOKEN
           valueFrom:
             secretKeyRef:
-              name: ibm-mongodb-operator-codecov-token
+              name: ibm-commonui-operator-codecov-token
               key: codecov-token
         securityContext:
           privileged: true
-  - name: build_ibm-mongodb-operator_postsubmit
+  - name: build_ibm-commonui-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^release-1.4$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-commonui-operator
     spec:
       containers:
       - command:
@@ -120,11 +120,11 @@ postsubmits:
         name: ""
         securityContext:
           privileged: true
-  - name: images_ibm-mongodb-operator_postsubmit
+  - name: images_ibm-commonui-operator_postsubmit
     branches:
-    - ^release-1.2$
+    - ^release-1.4$
     decorate: true
-    path_alias: github.com/IBM/ibm-mongodb-operator
+    path_alias: github.com/IBM/ibm-commonui-operator
     labels:
       preset-service-account: "true"
     spec:

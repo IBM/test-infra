@@ -2,7 +2,8 @@
 # Binary tools
 #############
 
-FROM golang:1.14.12 as binary_tools_context
+# Use golang as the binary_tools_context
+FROM golang:1.15.7 as binary_tools_context
 
 ARG ARCH=amd64
 
