@@ -3,7 +3,7 @@ presubmits:
   - name: build_ibm-commonui-operator
     branches:
     - ^release-1.5$
-    decorate: truef
+    decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-commonui-operator
     rerun_command: /test build ibm-commonui-operator
