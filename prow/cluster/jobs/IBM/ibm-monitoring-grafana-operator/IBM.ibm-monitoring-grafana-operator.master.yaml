@@ -84,7 +84,7 @@ presubmits:
       containers:
       - command:
         - sleep
-        - 1800
+        - '1800'
         image: quay.io/multicloudlab/check-tool:v20201130-d61b998b6
         name: ""
         securityContext:
