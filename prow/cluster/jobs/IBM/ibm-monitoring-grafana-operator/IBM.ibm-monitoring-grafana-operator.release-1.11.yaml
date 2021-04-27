@@ -2,8 +2,13 @@ presubmits:
   IBM/ibm-monitoring-grafana-operator:
   - name: build_ibm-monitoring-grafana-operator
     branches:
-    - ^release-1.11$
+    - ^master$
     decorate: true
+    decoration_config:
+      ssh_key_secrets:
+      - private-ssh-secret
+    labels:
+      preset-ibm-private-repo: "true"
     always_run: true
     path_alias: github.com/IBM/ibm-monitoring-grafana-operator
     rerun_command: /test build ibm-monitoring-grafana-operator
@@ -13,15 +18,20 @@ presubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
         name: ""
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
   - name: check_ibm-monitoring-grafana-operator
     branches:
-    - ^release-1.11$
+    - ^master$
     decorate: true
+    decoration_config:
+      ssh_key_secrets:
+      - private-ssh-secret
+    labels:
+      preset-ibm-private-repo: "true"
     always_run: true
     path_alias: github.com/IBM/ibm-monitoring-grafana-operator
     rerun_command: /test check ibm-monitoring-grafana-operator
@@ -30,15 +40,20 @@ presubmits:
       - command:
         - make
         - check
-        image: quay.io/multicloudlab/check-tool:v20201130-d61b998b6
+        image: quay.io/multicloudlab/check-tool:v20210406-b49ca9d61
         name: ""
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?check(?: .*?)?$'
   - name: test_ibm-monitoring-grafana-operator
     branches:
-    - ^release-1.11$
+    - ^master$
     decorate: true
+    decoration_config:
+      ssh_key_secrets:
+      - private-ssh-secret
+    labels:
+      preset-ibm-private-repo: "true"
     always_run: true
     path_alias: github.com/IBM/ibm-monitoring-grafana-operator
     rerun_command: /test test ibm-monitoring-grafana-operator
@@ -48,32 +63,41 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
         name: ""
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?test(?: .*?)?$'
-
 postsubmits:
   IBM/ibm-monitoring-grafana-operator:
   - name: check_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^release-1.11$
+    - ^master$
     decorate: true
+    decoration_config:
+      ssh_key_secrets:
+      - private-ssh-secret
+    labels:
+      preset-ibm-private-repo: "true"
     path_alias: github.com/IBM/ibm-monitoring-grafana-operator
     spec:
       containers:
       - command:
         - make
         - check
-        image: quay.io/multicloudlab/check-tool:v20201130-d61b998b6
+        image: quay.io/multicloudlab/check-tool:v20210406-b49ca9d61
         name: ""
         securityContext:
           privileged: true
   - name: test_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^release-1.11$
+    - ^master$
     decorate: true
+    decoration_config:
+      ssh_key_secrets:
+      - private-ssh-secret
+    labels:
+      preset-ibm-private-repo: "true"
     path_alias: github.com/IBM/ibm-monitoring-grafana-operator
     spec:
       containers:
@@ -81,21 +105,26 @@ postsubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
         name: ""
         securityContext:
           privileged: true
   - name: coverage_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^release-1.11$
+    - ^master$
     decorate: true
+    decoration_config:
+      ssh_key_secrets:
+      - private-ssh-secret
+    labels:
+      preset-ibm-private-repo: "true"
     path_alias: github.com/IBM/ibm-monitoring-grafana-operator
     spec:
       containers:
       - command:
         - make
         - coverage
-        image: quay.io/multicloudlab/check-tool:v20201130-d61b998b6
+        image: quay.io/multicloudlab/check-tool:v20210406-b49ca9d61
         name: ""
         env:
         - name: CODECOV_TOKEN
@@ -107,8 +136,13 @@ postsubmits:
           privileged: true
   - name: build_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^release-1.11$
+    - ^master$
     decorate: true
+    decoration_config:
+      ssh_key_secrets:
+      - private-ssh-secret
+    labels:
+      preset-ibm-private-repo: "true"
     path_alias: github.com/IBM/ibm-monitoring-grafana-operator
     spec:
       containers:
@@ -116,16 +150,20 @@ postsubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
         name: ""
         securityContext:
           privileged: true
   - name: images_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^release-1.11$
+    - ^master$
     decorate: true
+    decoration_config:
+      ssh_key_secrets:
+      - private-ssh-secret
     path_alias: github.com/IBM/ibm-monitoring-grafana-operator
     labels:
+      preset-ibm-private-repo: "true"
       preset-service-account: "true"
     spec:
       containers:
@@ -133,7 +171,7 @@ postsubmits:
         - entrypoint
         - make
         - images
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
         name: ""
         securityContext:
           privileged: true
