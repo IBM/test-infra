@@ -2,7 +2,7 @@ presubmits:
   IBM/ibm-monitoring-grafana-operator:
   - name: build_ibm-monitoring-grafana-operator
     branches:
-    - ^master$
+    - ^release-1.11$
     decorate: true
     decoration_config:
       ssh_key_secrets:
@@ -25,7 +25,7 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
   - name: check_ibm-monitoring-grafana-operator
     branches:
-    - ^master$
+    - ^release-1.11$
     decorate: true
     decoration_config:
       ssh_key_secrets:
@@ -47,7 +47,7 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?check(?: .*?)?$'
   - name: test_ibm-monitoring-grafana-operator
     branches:
-    - ^master$
+    - ^release-1.11$
     decorate: true
     decoration_config:
       ssh_key_secrets:
@@ -72,7 +72,7 @@ postsubmits:
   IBM/ibm-monitoring-grafana-operator:
   - name: check_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^master$
+    - ^release-1.11$
     decorate: true
     decoration_config:
       ssh_key_secrets:
@@ -91,7 +91,7 @@ postsubmits:
           privileged: true
   - name: test_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^master$
+    - ^release-1.11$
     decorate: true
     decoration_config:
       ssh_key_secrets:
@@ -111,7 +111,7 @@ postsubmits:
           privileged: true
   - name: coverage_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^master$
+    - ^release-1.11$
     decorate: true
     decoration_config:
       ssh_key_secrets:
@@ -136,7 +136,7 @@ postsubmits:
           privileged: true
   - name: build_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^master$
+    - ^release-1.11$
     decorate: true
     decoration_config:
       ssh_key_secrets:
@@ -156,7 +156,7 @@ postsubmits:
           privileged: true
   - name: images_ibm-monitoring-grafana-operator_postsubmit
     branches:
-    - ^master$
+    - ^release-1.11$
     decorate: true
     decoration_config:
       ssh_key_secrets:
