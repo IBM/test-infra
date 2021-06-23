@@ -3,6 +3,9 @@ presubmits:
   - name: build_ibm-mongodb-operator
     branches:
     - ^master$
+    - ^release-efix$
+    - ^release-eus$
+    - ^release-future$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-mongodb-operator
