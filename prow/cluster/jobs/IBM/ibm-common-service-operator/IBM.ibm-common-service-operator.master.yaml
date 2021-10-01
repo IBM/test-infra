@@ -8,6 +8,7 @@ presubmits:
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     path_alias: github.com/IBM/ibm-common-service-operator
     rerun_command: /test check-ibm-common-service-operator
@@ -29,6 +30,7 @@ presubmits:
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     path_alias: github.com/IBM/ibm-common-service-operator
     rerun_command: /test test-ibm-common-service-operator-amd64
@@ -38,7 +40,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -51,6 +53,7 @@ presubmits:
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     path_alias: github.com/IBM/ibm-common-service-operator
     rerun_command: /test test-ibm-common-service-operator-ppc64le
@@ -60,7 +63,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -73,6 +76,7 @@ presubmits:
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     path_alias: github.com/IBM/ibm-common-service-operator
     rerun_command: /test test-ibm-common-service-operator-s390x
@@ -82,7 +86,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -96,6 +100,7 @@ postsubmits:
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -106,7 +111,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -117,6 +122,7 @@ postsubmits:
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -127,7 +133,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -138,6 +144,7 @@ postsubmits:
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -148,7 +155,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -159,6 +166,7 @@ postsubmits:
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -169,7 +177,8 @@ postsubmits:
         - entrypoint
         - make
         - multiarch-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
+

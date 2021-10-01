@@ -3,7 +3,7 @@ presubmits:
   - name: build_ibm-monitoring-grafana-operator
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-eus$
     - ^release-efix$
     decorate: true
@@ -21,7 +21,7 @@ presubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -29,7 +29,7 @@ presubmits:
   - name: check_ibm-monitoring-grafana-operator
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-eus$
     - ^release-efix$
     decorate: true
@@ -46,7 +46,7 @@ presubmits:
       - command:
         - make
         - check
-        image: quay.io/multicloudlab/check-tool:v20210406-b49ca9d61
+        image: quay.io/multicloudlab/check-tool:v20210728-868c32116
         name: ""
         securityContext:
           privileged: true
@@ -54,7 +54,7 @@ presubmits:
   - name: test_ibm-monitoring-grafana-operator
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-eus$
     - ^release-efix$
     decorate: true
@@ -72,7 +72,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -82,7 +82,7 @@ postsubmits:
   - name: check_ibm-monitoring-grafana-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-eus$
     - ^release-efix$
     decorate: true
@@ -97,14 +97,14 @@ postsubmits:
       - command:
         - make
         - check
-        image: quay.io/multicloudlab/check-tool:v20210406-b49ca9d61
+        image: quay.io/multicloudlab/check-tool:v20210728-868c32116
         name: ""
         securityContext:
           privileged: true
   - name: test_ibm-monitoring-grafana-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-eus$
     - ^release-efix$
     decorate: true
@@ -120,14 +120,14 @@ postsubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
   - name: coverage_ibm-monitoring-grafana-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-eus$
     - ^release-efix$
     decorate: true
@@ -142,7 +142,7 @@ postsubmits:
       - command:
         - make
         - coverage
-        image: quay.io/multicloudlab/check-tool:v20210406-b49ca9d61
+        image: quay.io/multicloudlab/check-tool:v20210728-868c32116
         name: ""
         env:
         - name: CODECOV_TOKEN
@@ -155,7 +155,7 @@ postsubmits:
   - name: build_ibm-monitoring-grafana-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-eus$
     - ^release-efix$
     decorate: true
@@ -171,14 +171,14 @@ postsubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
   - name: images_ibm-monitoring-grafana-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-eus$
     - ^release-efix$
     decorate: true
@@ -195,7 +195,8 @@ postsubmits:
         - entrypoint
         - make
         - images
-        image: quay.io/multicloudlab/build-tool:v20210426-c4cf87435
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
+

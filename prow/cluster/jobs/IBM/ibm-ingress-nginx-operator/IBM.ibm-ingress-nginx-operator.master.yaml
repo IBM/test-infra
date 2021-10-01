@@ -26,9 +26,9 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
     - ^release-efix$
     - ^release-eus$
+    - ^release-future$
     decorate: true
     path_alias: github.com/IBM/ibm-ingress-nginx-operator
     rerun_command: /test test-ibm-ingress-nginx-operator
@@ -38,7 +38,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -48,9 +48,9 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
     - ^release-efix$
     - ^release-eus$
+    - ^release-future$
     decorate: true
     path_alias: github.com/IBM/ibm-ingress-nginx-operator
     rerun_command: /test build-ibm-ingress-nginx-operator-amd64
@@ -60,7 +60,7 @@ presubmits:
         - entrypoint
         - make
         - build-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -70,9 +70,9 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
     - ^release-efix$
     - ^release-eus$
+    - ^release-future$
     decorate: true
     path_alias: github.com/IBM/ibm-ingress-nginx-operator
     rerun_command: /test build-ibm-ingress-nginx-operator-ppc64le
@@ -82,7 +82,7 @@ presubmits:
         - entrypoint
         - make
         - build-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -92,9 +92,9 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
     - ^release-efix$
     - ^release-eus$
+    - ^release-future$
     decorate: true
     path_alias: github.com/IBM/ibm-ingress-nginx-operator
     rerun_command: /test build-ibm-ingress-nginx-operator-s390x
@@ -104,7 +104,7 @@ presubmits:
         - entrypoint
         - make
         - build-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -115,9 +115,9 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
-    - ^release-cd$
     - ^release-efix$
     - ^release-eus$
+    - ^release-future$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -128,7 +128,7 @@ postsubmits:
         - entrypoint
         - make
         - push-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -136,9 +136,9 @@ postsubmits:
     cluster: ppc64le
     branches:
     - ^master$
-    - ^release-cd$
     - ^release-efix$
     - ^release-eus$
+    - ^release-future$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -149,7 +149,7 @@ postsubmits:
         - entrypoint
         - make
         - push-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -157,9 +157,9 @@ postsubmits:
     cluster: s390x
     branches:
     - ^master$
-    - ^release-cd$
     - ^release-efix$
     - ^release-eus$
+    - ^release-future$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -170,7 +170,7 @@ postsubmits:
         - entrypoint
         - make
         - push-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -178,9 +178,9 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
-    - ^release-cd$
     - ^release-efix$
     - ^release-eus$
+    - ^release-future$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -191,7 +191,8 @@ postsubmits:
         - entrypoint
         - make
         - multiarch-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
+

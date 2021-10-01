@@ -5,7 +5,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -27,7 +27,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -40,7 +40,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -50,7 +50,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -63,7 +63,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -73,7 +73,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -86,7 +86,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -96,7 +96,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -109,7 +109,7 @@ presubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -119,7 +119,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -132,7 +132,7 @@ presubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -142,7 +142,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -155,7 +155,7 @@ presubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -166,7 +166,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -191,7 +191,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -203,7 +203,7 @@ postsubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -211,7 +211,7 @@ postsubmits:
     cluster: ppc64le
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -223,7 +223,7 @@ postsubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -231,7 +231,7 @@ postsubmits:
     cluster: s390x
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -243,7 +243,7 @@ postsubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -251,7 +251,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -265,7 +265,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -273,7 +273,7 @@ postsubmits:
     cluster: ppc64le
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -287,7 +287,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -295,7 +295,7 @@ postsubmits:
     cluster: s390x
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -309,7 +309,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -317,7 +317,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
     - ^release-k$
@@ -331,7 +331,8 @@ postsubmits:
         - entrypoint
         - make
         - multiarch-image
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
+

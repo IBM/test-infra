@@ -3,9 +3,10 @@ presubmits:
   - name: build_ibm-commonui-operator
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-commonui-operator
@@ -16,7 +17,7 @@ presubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -24,9 +25,10 @@ presubmits:
   - name: check_ibm-commonui-operator
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-commonui-operator
@@ -44,9 +46,10 @@ presubmits:
   - name: test_ibm-commonui-operator
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-commonui-operator
@@ -57,7 +60,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
@@ -68,9 +71,10 @@ postsubmits:
   - name: check_ibm-commonui-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     spec:
@@ -85,9 +89,10 @@ postsubmits:
   - name: test_ibm-commonui-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     spec:
@@ -96,16 +101,17 @@ postsubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
   - name: coverage_ibm-commonui-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     spec:
@@ -126,9 +132,10 @@ postsubmits:
   - name: build_ibm-commonui-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     spec:
@@ -137,16 +144,17 @@ postsubmits:
         - entrypoint
         - make
         - build
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
   - name: images_ibm-commonui-operator_postsubmit
     branches:
     - ^master$
-    - ^release-cd$
+    - ^release-future$
     - ^release-efix$
     - ^release-eus$
+    - ^release-k$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     labels:
@@ -157,7 +165,8 @@ postsubmits:
         - entrypoint
         - make
         - images
-        image: quay.io/multicloudlab/build-tool:v20210203-ad22dc7f6
+        image: quay.io/multicloudlab/build-tool:v20210831-f48ffbb7e
         name: ""
         securityContext:
           privileged: true
+

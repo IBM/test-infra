@@ -119,9 +119,9 @@ plugins:
 
 external_plugins:
   IBM:
-  - name: needs-rebase
-    events:
-    - pull_request
+  # - name: needs-rebase
+  #   events:
+  #   - pull_request
   - name: cherrypicker
     events:
       - issue_comment
@@ -142,11 +142,11 @@ external_plugins:
     events:
       - issue_comment
       - pull_request
-  rh-ibm-synergy:
-  - name: needs-rebase
-    events:
-    - pull_request
-  - name: cherrypicker
-    events:
-      - issue_comment
-      - pull_request
+  # rh-ibm-synergy:
+  # - name: needs-rebase
+  #   events:
+  #   - pull_request
+  # - name: cherrypicker
+  #   events:
+  #     - issue_comment
+  #     - pull_request
