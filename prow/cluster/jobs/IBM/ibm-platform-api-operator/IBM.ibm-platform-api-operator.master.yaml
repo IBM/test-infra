@@ -20,7 +20,7 @@ presubmits:
         name: ""
         securityContext:
           privileged: true
-    trigger: '(?m)^/test (?:.*? )?check(?: .*?)?$'
+    trigger: '(?m)^/test (?:.*? )?check(?:.*?)?$'
   - name: test-ibm-platform-api-operator-amd64
     cluster: default
     branches:
