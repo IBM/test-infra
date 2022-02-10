@@ -42,7 +42,7 @@ presubmits:
         name: ""
         securityContext:
           privileged: true
-    trigger: '(?m)^/test (?:.*? )?test(?: .*?)?$'
+    trigger: '(?m)^/test (?:.*? )?test(?:.*?)?$'
   - name: test-ibm-platform-api-operator-ppc64le
     cluster: ppc64le
     branches:
@@ -64,7 +64,7 @@ presubmits:
         name: ""
         securityContext:
           privileged: true
-    trigger: '(?m)^/test (?:.*? )?test(?: .*?)?$'
+    trigger: '(?m)^/test (?:.*? )?test(?:.*?)?$'
   - name: test-ibm-platform-api-operator-s390x
     cluster: s390x
     branches:
@@ -86,7 +86,7 @@ presubmits:
         name: ""
         securityContext:
           privileged: true
-    trigger: '(?m)^/test (?:.*? )?test(?: .*?)?$'
+    trigger: '(?m)^/test (?:.*? )?test(?:.*?)?$'
   - name: build-ibm-platform-api-operator-amd64
     cluster: default
     branches:
@@ -110,7 +110,7 @@ presubmits:
         name: ""
         securityContext:
           privileged: true
-    trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
+    trigger: '(?m)^/test (?:.*? )?build(?:.*?)?$'
   - name: build-ibm-platform-api-operator-ppc64le
     cluster: ppc64le
     branches:
@@ -134,7 +134,7 @@ presubmits:
         name: ""
         securityContext:
           privileged: true
-    trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
+    trigger: '(?m)^/test (?:.*? )?build(?:.*?)?$'
   - name: build-ibm-platform-api-operator-s390x
     cluster: s390x
     branches:
@@ -158,7 +158,7 @@ presubmits:
         name: ""
         securityContext:
           privileged: true
-    trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
+    trigger: '(?m)^/test (?:.*? )?build(?:.*?)?$'
 postsubmits:
   IBM/ibm-platform-api-operator:
   - name: image-ibm-platform-api-operator-amd64-postsubmit
