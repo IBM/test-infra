@@ -105,7 +105,7 @@ presubmits:
       - command:
         - entrypoint
         - make
-        - build
+        - build-operator-image
         image: quay.io/multicloudlab/build-tool:v20220105-f9f161e03
         name: ""
         securityContext:
@@ -129,7 +129,7 @@ presubmits:
       - command:
         - entrypoint
         - make
-        - build
+        - build-operator-image
         image: quay.io/multicloudlab/build-tool:v20220105-f9f161e03
         name: ""
         securityContext:
@@ -153,7 +153,7 @@ presubmits:
       - command:
         - entrypoint
         - make
-        - build
+        - build-operator-image
         image: quay.io/multicloudlab/build-tool:v20220105-f9f161e03
         name: ""
         securityContext:
@@ -161,69 +161,6 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
 postsubmits:
   IBM/ibm-platform-api-operator:
-  - name: build-ibm-platform-api-operator-amd64-postsubmit
-    cluster: default
-    branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
-    - ^release-eus$
-    labels:
-      preset-service-account: "true"
-    decorate: true
-    path_alias: github.com/IBM/ibm-platform-api-operator
-    spec:
-      containers:
-      - command:
-        - entrypoint
-        - make
-        - build
-        image: quay.io/multicloudlab/build-tool:v20220105-f9f161e03
-        name: ""
-        securityContext:
-          privileged: true
-  - name: build-ibm-platform-api-operator-ppc64le-postsubmit
-    cluster: ppc64le
-    branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
-    - ^release-eus$
-    labels:
-      preset-service-account: "true"
-    decorate: true
-    path_alias: github.com/IBM/ibm-platform-api-operator
-    spec:
-      containers:
-      - command:
-        - entrypoint
-        - make
-        - build
-        image: quay.io/multicloudlab/build-tool:v20220105-f9f161e03
-        name: ""
-        securityContext:
-          privileged: true
-  - name: build-ibm-platform-api-operator-s390x-postsubmit
-    cluster: s390x
-    branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
-    - ^release-eus$
-    labels:
-      preset-service-account: "true"
-    decorate: true
-    path_alias: github.com/IBM/ibm-platform-api-operator
-    spec:
-      containers:
-      - command:
-        - entrypoint
-        - make
-        - build
-        image: quay.io/multicloudlab/build-tool:v20220105-f9f161e03
-        name: ""
-        securityContext:
-          privileged: true
   - name: image-ibm-platform-api-operator-amd64-postsubmit
     cluster: default
     branches:
