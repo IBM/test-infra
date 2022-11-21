@@ -1,6 +1,6 @@
 presubmits:
   IBM/ibm-metering-operator:
-  - name: build_ibm-metering-operator
+  - name: build_ibm-metering-operator35
     branches:
     - ^release-3.5$
     decorate: true
