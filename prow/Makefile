@@ -20,8 +20,8 @@ include Makefile.gcloud.mk
 
 # GKE variables.
 PROJECT ?= oceanic-guard-191815
-ZONE    ?= us-west1-a
-CLUSTER ?= prow
+ZONE    ?= us-east5-c
+CLUSTER ?= bedrock-prow
 
 update-config-dry-run: get-cluster-credentials
 	./recreate_prow_configmaps.py \
