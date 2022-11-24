@@ -16,7 +16,7 @@
 
 KUBECTL=$(command -v kubectl)
 DOCKER_REGISTRY="quay.io"
-DOCKER_USERNAME="cicdtest+automationtest"
+DOCKER_USERNAME?="cicdtest+automationtest"
 DOCKER_PASSWORD=$(${KUBECTL} -n default get secret quay-cred -o jsonpath='{.data.password}' | base64 --decode)
 
 # support other container tools, e.g. podman
