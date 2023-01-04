@@ -186,6 +186,18 @@ presets:
     value: us-east5-c
   - name: CLUSTER
     value: bedrock-prow
+  - name: GOOGLE_APPLICATION_CREDENTIALS
+    value: /etc/service-account/service-account.json
+  - name: CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE
+    value: /etc/service-account/service-account.json
+  volumeMounts:
+  - name: service
+    mountPath: /etc/service-account
+    readOnly: true
+  volumes:
+  - name: service
+    secret:
+      secretName: service-account
 # presets for private repos
 - labels:
     preset-service-account: "true"

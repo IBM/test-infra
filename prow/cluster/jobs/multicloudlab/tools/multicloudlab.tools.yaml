@@ -7,8 +7,7 @@ postsubmits:
       branches:
         - ^master$
       labels:
-        - preset-service-account: "true"
-        - preset-tool-image-push: "true"
+        preset-tool-image-push: "true"
       run_if_changed: "docker/*"
       spec:
         containers:

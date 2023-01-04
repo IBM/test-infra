@@ -4,8 +4,7 @@ postsubmits:
     cluster: default
     decorate: true
     labels:
-    - preset-service-account: "true"
-    - preset-tool-image-push: "true"
+      preset-tool-image-push: "true"
     branches:
     - ^master$
     run_if_changed: 'prow/docker/check-tool/*'
@@ -22,8 +21,7 @@ postsubmits:
     cluster: default
     decorate: true
     labels:
-    - preset-service-account: "true"
-    - preset-tool-image-push: "true"
+      preset-tool-image-push: "true"
     branches:
     - ^master$
     run_if_changed: 'prow/docker/build-tool/*'
@@ -40,8 +38,7 @@ postsubmits:
     cluster: ppc64le
     decorate: true
     labels:
-    - preset-service-account: "true"
-    - preset-tool-image-push: "true"
+      preset-tool-image-push: "true"
     branches:
     - ^master$
     run_if_changed: 'prow/docker/build-tool/*'
@@ -58,8 +55,7 @@ postsubmits:
     cluster: s390x
     decorate: true
     labels:
-    - preset-service-account: "true"
-    - preset-tool-image-push: "true"
+      preset-tool-image-push: "true"
     branches:
     - ^master$
     run_if_changed: 'prow/docker/build-tool/*'
@@ -75,9 +71,7 @@ postsubmits:
   - name: build-tool-multiarch-image-postsubmit
     cluster: default
     decorate: true
-    labels:
-    - preset-service-account: "true"
-    - preset-tool-image-push: "true"
+      preset-tool-image-push: "true"
     branches:
     - ^master$
     run_if_changed: 'prow/docker/build-tool/*'
