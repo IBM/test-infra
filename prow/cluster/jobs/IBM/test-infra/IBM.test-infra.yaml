@@ -71,6 +71,7 @@ postsubmits:
   - name: build-tool-multiarch-image-postsubmit
     cluster: default
     decorate: true
+    labels:
       preset-tool-image-push: "true"
     branches:
     - ^master$
