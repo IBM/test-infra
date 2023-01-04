@@ -176,6 +176,16 @@ tide:
 #             - continuous-integration/travis-ci/pr
 
 presets:
+# presets for tool image push
+- labels:
+    preset-tool-image-push: "true"
+  env:
+  - name: IMAGE_REPO
+    value: quay.io/cicdtest
+  - name: ZONE
+    value: us-east5-c
+  - name: CLUSTER
+    value: bedrock-prow
 # presets for private repos
 - labels:
     preset-service-account: "true"

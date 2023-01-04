@@ -7,11 +7,12 @@ postsubmits:
       branches:
         - ^master$
       labels:
-        preset-service-account: "true"
+        - preset-service-account: "true"
+        - preset-tool-image-push: "true"
       run_if_changed: "docker/*"
       spec:
         containers:
-          - image: quay.io/multicloudlab/build-tool:v20200817-b1f2b4c05
+          - image: quay.io/cicdtest/build-tool:v20230104-558747cdc
             # docker in docker
             securityContext:
               privileged: true
