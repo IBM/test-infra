@@ -18,7 +18,7 @@ presubmits:
       - command:
         - make
         - check
-        image: quay.io/cicdtest/check-tool:v20230104-58a80daad
+        image: quay.io/cicdtest/check-tool:current
         name: ""
         securityContext:
           privileged: true
@@ -42,7 +42,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/cicdtest/build-tool:v20230104-558747cdc
+        image: quay.io/cicdtest/build-tool:current
         name: ""
         securityContext:
           privileged: true
@@ -66,7 +66,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/cicdtest/build-tool:v20230104-558747cdc
+        image: quay.io/cicdtest/build-tool:current
         name: ""
         securityContext:
           privileged: true
@@ -90,7 +90,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/cicdtest/build-tool:v20230104-558747cdc
+        image: quay.io/cicdtest/build-tool:current
         name: ""
         securityContext:
           privileged: true
@@ -116,7 +116,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/cicdtest/build-tool:v20230104-558747cdc
+        image: quay.io/cicdtest/build-tool:current
         name: ""
         securityContext:
           privileged: true
@@ -139,7 +139,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/cicdtest/build-tool:v20230104-558747cdc
+        image: quay.io/cicdtest/build-tool:current
         name: ""
         securityContext:
           privileged: true
@@ -162,7 +162,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/cicdtest/build-tool:v20230104-558747cdc
+        image: quay.io/cicdtest/build-tool:current
         name: ""
         securityContext:
           privileged: true
@@ -185,7 +185,7 @@ postsubmits:
         - entrypoint
         - make
         - multiarch-image
-        image: quay.io/cicdtest/build-tool:v20230104-558747cdc
+        image: quay.io/cicdtest/build-tool:current
         name: ""
         securityContext:
           privileged: true
