@@ -5,6 +5,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     rerun_command: /test check-ibm-grafana-ocpthanos-proxy
@@ -23,6 +24,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     rerun_command: /test test-ibm-grafana-ocpthanos-proxy-amd64
@@ -42,6 +44,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     rerun_command: /test test-ibm-grafana-ocpthanos-proxy-ppc64le
@@ -61,6 +64,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     rerun_command: /test test-ibm-grafana-ocpthanos-proxy-s390x
@@ -80,6 +84,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     rerun_command: /test build-ibm-grafana-ocpthanos-proxy-amd64
@@ -99,6 +104,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     rerun_command: /test build-ibm-grafana-ocpthanos-proxy-ppc64le
@@ -118,6 +124,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     rerun_command: /test build-ibm-grafana-ocpthanos-proxy-s390x
@@ -138,6 +145,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     spec:
@@ -159,6 +167,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     spec:
@@ -175,6 +184,7 @@ postsubmits:
     cluster: ppc64le
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     spec:
@@ -191,6 +201,7 @@ postsubmits:
     cluster: s390x
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     path_alias: github.com/IBM/ibm-grafana-ocpthanos-proxy
     spec:
@@ -207,6 +218,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -225,6 +237,7 @@ postsubmits:
     cluster: ppc64le
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -243,6 +256,7 @@ postsubmits:
     cluster: s390x
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -261,6 +275,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
+    - ^release-ltsr$
     decorate: true
     labels:
       preset-service-account: "true"
