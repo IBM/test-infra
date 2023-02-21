@@ -10,6 +10,7 @@ presubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-323$
     decorate: true
     path_alias: github.com/IBM/ibm-common-service-operator
     rerun_command: /test check-ibm-common-service-operator
@@ -33,6 +34,7 @@ presubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-323$
     decorate: true
     path_alias: github.com/IBM/ibm-common-service-operator
     rerun_command: /test test-ibm-common-service-operator-amd64
@@ -57,6 +59,7 @@ presubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-323$
     decorate: true
     path_alias: github.com/IBM/ibm-common-service-operator
     rerun_command: /test test-ibm-common-service-operator-ppc64le
@@ -81,6 +84,7 @@ presubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-323$
     decorate: true
     path_alias: github.com/IBM/ibm-common-service-operator
     rerun_command: /test test-ibm-common-service-operator-s390x
@@ -106,6 +110,7 @@ postsubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-323$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -129,6 +134,7 @@ postsubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-323$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -152,6 +158,7 @@ postsubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-323$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -175,6 +182,7 @@ postsubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-323$
     decorate: true
     labels:
       preset-service-account: "true"
