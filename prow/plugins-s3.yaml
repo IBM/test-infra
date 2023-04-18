@@ -1,3 +1,5 @@
+# add some comment to check config updator
+
 triggers:
 - repos:
   - IBM
