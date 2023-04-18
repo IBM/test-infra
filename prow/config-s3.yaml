@@ -1,7 +1,7 @@
 # add some comment to check config updator
 #
 
-prowjob_namespace: prow
+prowjob_namespace: default
 pod_namespace: test-pods
 decorate_all_jobs: true
 
