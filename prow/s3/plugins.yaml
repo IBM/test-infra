@@ -1,5 +1,3 @@
-# add some comment to check config updator
-
 triggers:
 - repos:
   - IBM
@@ -8,9 +6,9 @@ triggers:
 
 config_updater:
   maps:
-    prow/config-s3.yaml:
+    prow/s3/config.yaml:
       name: config
-    prow/plugins-s3.yaml:
+    prow/s3/plugins.yaml:
       name: plugins
     prow/cluster/jobs/**/*.yaml:
       name: job-config
