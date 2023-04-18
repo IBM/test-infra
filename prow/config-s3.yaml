@@ -1,4 +1,5 @@
 # add some comment to check config updator
+#
 
 prowjob_namespace: prow
 pod_namespace: test-pods
