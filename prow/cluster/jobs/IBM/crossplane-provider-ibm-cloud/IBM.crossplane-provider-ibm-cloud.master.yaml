@@ -23,7 +23,7 @@ presubmits:
         env:
         - name: RUNNING_IN_CI
           value: "true"
-        image: quay.io/cicdtest/build-tool:v20230405-5dc723dd5
+        image: quay.io/cicdtest/build-tool:v20230424-a3bdf7210
         name: ""
         securityContext:
           privileged: true
@@ -49,7 +49,7 @@ presubmits:
         env:
         - name: RUNNING_IN_CI
           value: "true"
-        image: quay.io/cicdtest/build-tool:v20230405-5dc723dd5
+        image: quay.io/cicdtest/build-tool:v20230424-a3bdf7210
         name: ""
         securityContext:
           privileged: true
@@ -76,7 +76,7 @@ postsubmits:
         env:
         - name: RUNNING_IN_CI
           value: "true"
-        image: quay.io/cicdtest/build-tool:v20230405-5dc723dd5
+        image: quay.io/cicdtest/build-tool:v20230424-a3bdf7210
         name: ""
         securityContext:
           privileged: true
@@ -101,7 +101,7 @@ postsubmits:
         env:
         - name: RUNNING_IN_CI
           value: "true"
-        image: quay.io/cicdtest/build-tool:v20230405-5dc723dd5
+        image: quay.io/cicdtest/build-tool:v20230424-a3bdf7210
         name: ""
         securityContext:
           privileged: true
@@ -126,7 +126,7 @@ postsubmits:
         env:
         - name: RUNNING_IN_CI
           value: "true"
-        image: quay.io/cicdtest/build-tool:v20230405-5dc723dd5
+        image: quay.io/cicdtest/build-tool:v20230424-a3bdf7210
         name: ""
         securityContext:
           privileged: true
