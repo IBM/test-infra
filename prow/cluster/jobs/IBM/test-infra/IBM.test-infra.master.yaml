@@ -25,20 +25,26 @@ presubmits:
     decorate: true
     path_alias: github.com/IBM/test-infra
     rerun_command: /test checkconfig-test-infra
-    run_if_changed: '^prow/(config|plugins|cluster/jobs/.*)\.yaml$'
+    run_if_changed: '^prow/(config|plugins|s3/.*|cluster/jobs/.*)\.yaml$'
     spec:
       containers:
-      - image: gcr.io/k8s-prow/checkconfig:v20230407-e8b3bf711e
+      - image: gcr.io/k8s-prow/checkconfig:v20230418-23b5d25059
         command:
         - /checkconfig
         args:
-        - --config-path=prow/config.yaml
+        - --config-path=prow/s3/config.yaml
         - --job-config-path=prow/cluster/jobs
-        - --plugin-config=prow/plugins.yaml
+        - --plugin-config=prow/s3/plugins.yaml
         - --strict
-        - --exclude-warning=mismatched-tide
-        - --exclude-warning=unknown-fields
-        - --exclude-warning=non-decorated-jobs
+        - --warnings=mismatched-tide-lenient
+        - --warnings=tide-strict-branch
+        - --warnings=needs-ok-to-test
+        - --warnings=validate-owners
+        - --warnings=missing-trigger
+        - --warnings=validate-urls
+        - --warnings=unknown-fields
+        - --warnings=duplicate-job-refs
+        - --warnings=unknown-fields-all
     trigger: '(?m)^/test (?:.*? )?checkconfig(?:.*?)?$'
   - name: test-test-infra
     cluster: default
