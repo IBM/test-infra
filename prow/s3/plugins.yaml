@@ -4,7 +4,6 @@ triggers:
   - hybridapp-io
   - multicloudlab
   - rh-ibm-synergy
-  trusted_org: IBM
   elide_skipped_contexts: true
 
 config_updater:
