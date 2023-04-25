@@ -241,6 +241,11 @@ presets:
   - mountPath: /home/ssh
     name: ssh-keys-ssh-secret
     readOnly: true
+  volumes:
+  - name: ssh-keys-ssh-secret-mount
+    secret:
+      secretName: ssh-secret
+      defaultMode: 0400
 # presets for private repos
 - labels:
     preset-ibm-private-repo: "true"
