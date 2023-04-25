@@ -76,7 +76,6 @@ plugins:
   - assign
   - blunderbuss
   - cat
-  - docs-no-retest
   - dog
   - golint
   - heart
