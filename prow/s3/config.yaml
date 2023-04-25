@@ -239,7 +239,7 @@ presets:
     value: github.com/rh-ibm-synergy
   volumeMounts:
   - mountPath: /home/ssh
-    name: ssh-keys-ssh-secret
+    name: ssh-keys-ssh-secret-mount
     readOnly: true
   volumes:
   - name: ssh-keys-ssh-secret-mount
