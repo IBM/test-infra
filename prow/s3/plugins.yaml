@@ -15,104 +15,108 @@ config_updater:
       name: job-config
 
 plugins:
-  IBM/test-infra:
-  - config-updater
-
   IBM:
-  - approve
-  - assign
-  - blunderbuss
-  - cat
-  - dog
-  - golint
-  - heart
-  - help
-  - hold
-  - label
-  - lgtm
-  - lifecycle
-  - milestone
-  - owners-label
-  - project
-  - retitle
-  - shrug
-  - size
-  - stage
-  - trigger
-  - verify-owners
-  - welcome
-  - wip
-  - yuks
+    plugins:
+    - approve
+    - assign
+    - blunderbuss
+    - cat
+    - dog
+    - golint
+    - heart
+    - help
+    - hold
+    - label
+    - lgtm
+    - lifecycle
+    - milestone
+    - owners-label
+    - project
+    - retitle
+    - shrug
+    - size
+    - stage
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+    - yuks
+  IBM/test-infra:
+    plugins:
+    - config-updater
 
   hybridapp-io:
-  - approve
-  - assign
-  - blunderbuss
-  - cat
-  - dog
-  - golint
-  - heart
-  - help
-  - hold
-  - label
-  - lgtm
-  - lifecycle
-  - milestone
-  - owners-label
-  - project
-  - retitle
-  - shrug
-  - size
-  - stage
-  - trigger
-  - verify-owners
-  - welcome
-  - wip
-  - yuks
+    plugins:
+    - approve
+    - assign
+    - blunderbuss
+    - cat
+    - dog
+    - golint
+    - heart
+    - help
+    - hold
+    - label
+    - lgtm
+    - lifecycle
+    - milestone
+    - owners-label
+    - project
+    - retitle
+    - shrug
+    - size
+    - stage
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+    - yuks
 
   multicloudlab:
-  - approve
-  - assign
-  - blunderbuss
-  - cat
-  - dog
-  - golint
-  - heart
-  - help
-  - hold
-  - label
-  - lgtm
-  - lifecycle
-  - milestone
-  - milestonestatus
-  - override
-  - owners-label
-  - pony
-  - project
-  - retitle
-  - shrug
-  - skip
-  - size
-  - stage
-  - trigger
-  - verify-owners
-  - welcome
-  - wip
-  - yuks
+    plugins:
+    - approve
+    - assign
+    - blunderbuss
+    - cat
+    - dog
+    - golint
+    - heart
+    - help
+    - hold
+    - label
+    - lgtm
+    - lifecycle
+    - milestone
+    - milestonestatus
+    - override
+    - owners-label
+    - pony
+    - project
+    - retitle
+    - shrug
+    - skip
+    - size
+    - stage
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+    - yuks
 
   rh-ibm-synergy:
-  - approve
-  - assign
-  - blunderbuss
-  - golint
-  - help
-  - hold
-  - lgtm
-  - lifecycle
-  - size
-  - trigger
-  - verify-owners
-  - wip
+    plugins:
+    - approve
+    - assign
+    - blunderbuss
+    - golint
+    - help
+    - hold
+    - lgtm
+    - lifecycle
+    - size
+    - trigger
+    - verify-owners
+    - wip
 
 external_plugins:
   IBM:
