@@ -36,7 +36,6 @@ presubmits:
         - --job-config-path=prow/cluster/jobs
         - --kubeconfig=/etc/kubeconfig/config
         - --plugin-config=prow/s3/plugins.yaml
-        - --strict
         - --warnings=mismatched-tide-lenient
         - --warnings=tide-strict-branch
         - --warnings=needs-ok-to-test
