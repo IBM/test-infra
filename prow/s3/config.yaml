@@ -259,7 +259,7 @@ presets:
   volumes:
   - name: ssh-keys-private-ssh-secret-mount
     secret:
-      secretName: private-ssh-secret
+      secretName: private-ssh-ghe
       defaultMode: 0400
 # Enable GOPROXY by default
 - env:
