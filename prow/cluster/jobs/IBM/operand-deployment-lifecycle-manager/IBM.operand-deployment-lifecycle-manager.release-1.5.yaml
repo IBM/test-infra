@@ -13,7 +13,7 @@ presubmits:
       - command:
         - make
         - check
-        image: quay.io/cicdtest/check-tool:v20230911-c58188f32
+        image: quay.io/cicdtest/check-tool:v20231010-ce7835db7
         name: ""
         securityContext:
           privileged: true
@@ -32,7 +32,7 @@ presubmits:
         - entrypoint
         - make
         - test
-        image: quay.io/cicdtest/build-tool:v20230911-c58188f32
+        image: quay.io/cicdtest/build-tool:v20231010-ce7835db7
         name: ""
         securityContext:
           privileged: true
@@ -53,7 +53,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/cicdtest/build-tool:v20230911-c58188f32
+        image: quay.io/cicdtest/build-tool:v20231010-ce7835db7
         name: ""
         securityContext:
           privileged: true
@@ -71,7 +71,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/cicdtest/build-tool:v20230911-c58188f32
+        image: quay.io/cicdtest/build-tool:v20231010-ce7835db7
         name: ""
         securityContext:
           privileged: true
@@ -89,7 +89,7 @@ postsubmits:
         - entrypoint
         - make
         - build-push-image
-        image: quay.io/cicdtest/build-tool:v20230911-c58188f32
+        image: quay.io/cicdtest/build-tool:v20231010-ce7835db7
         name: ""
         securityContext:
           privileged: true
@@ -107,7 +107,7 @@ postsubmits:
         - entrypoint
         - make
         - multiarch-image
-        image: quay.io/cicdtest/build-tool:v20230911-c58188f32
+        image: quay.io/cicdtest/build-tool:v20231010-ce7835db7
         name: ""
         securityContext:
           privileged: true
