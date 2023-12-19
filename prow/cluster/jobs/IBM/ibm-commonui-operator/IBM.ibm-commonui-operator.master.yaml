@@ -152,4 +152,3 @@ postsubmits:
         name: ""
         securityContext:
           privileged: true
-
