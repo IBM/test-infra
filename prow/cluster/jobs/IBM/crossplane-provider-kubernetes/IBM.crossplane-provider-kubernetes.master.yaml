@@ -49,6 +49,8 @@ presubmits:
         env:
         - name: RUNNING_IN_CI
           value: "true"
+        - name: GO111MODULE
+          value: "off"
         image: quay.io/cicdtest/build-tool:v20240307-f4ddcb239
         name: ""
         securityContext:
