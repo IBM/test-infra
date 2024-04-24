@@ -8,6 +8,7 @@ presubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-sc2$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-commonui-operator
@@ -31,6 +32,7 @@ presubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-sc2$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-commonui-operator
@@ -53,6 +55,7 @@ presubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-sc2$
     decorate: true
     always_run: true
     path_alias: github.com/IBM/ibm-commonui-operator
@@ -79,6 +82,7 @@ postsubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-sc2$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     spec:
@@ -98,6 +102,7 @@ postsubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-sc2$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     spec:
@@ -118,6 +123,7 @@ postsubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-sc2$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     spec:
@@ -138,6 +144,7 @@ postsubmits:
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
+    - ^release-sc2$
     decorate: true
     path_alias: github.com/IBM/ibm-commonui-operator
     labels:
