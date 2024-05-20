@@ -11,7 +11,7 @@ postsubmits:
       run_if_changed: "docker/*"
       spec:
         containers:
-          - image: quay.io/cicdtest/build-tool:v20240404-4dafe4f9a
+          - image: quay.io/cicdtest/build-tool:v20240520-99b2ce1b5
             # docker in docker
             securityContext:
               privileged: true
