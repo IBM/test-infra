@@ -42,6 +42,7 @@ tide:
     IBM/ibm-cert-manager-operator: squash
     IBM/ibm-commonui-operator: squash
     IBM/ibm-common-service-operator: squash
+    IBM/ibm-account-iam-operator: squash
     IBM/ibm-namespace-scope-operator: squash
     IBM/ibm-common-service-webhook: squash
     IBM/ibm-crossplane-operator: squash
@@ -106,6 +107,7 @@ tide:
     - IBM/ibm-cert-manager-operator
     - IBM/ibm-commonui-operator
     - IBM/ibm-common-service-operator
+    - IBM/ibm-account-iam-operator
     - IBM/ibm-namespace-scope-operator
     - IBM/ibm-common-service-webhook
     - IBM/ibm-crossplane-operator
