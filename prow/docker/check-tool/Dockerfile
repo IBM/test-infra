@@ -130,11 +130,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ruby2.7-dev
 
 # Install verification tools
-## explicit nokogiri for ruby version
-RUN gem install --no-wrappers --no-document nokogiri -v 1.15.5
+## update rubygems version to resolve dependency issues
+RUN gem update --system 3.3.22
 RUN gem install --no-wrappers --no-document mdl -v ${MDL_VERSION}
-# Try to fix dependency issue for html-proofer
-RUN gem install --no-wrappers --no-document public_suffix -v 5.1.1
 RUN gem install --no-wrappers --no-document html-proofer -v ${HTMLPROOFER_VERSION}
 RUN gem install --no-wrappers --no-document awesome_bot -v ${AWESOMEBOT_VERSION}
 RUN gem install --no-wrappers --no-document licensee -v ${LICENSEE_VERSION}
