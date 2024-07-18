@@ -6,7 +6,6 @@ presubmits:
     branches:
     - ^main$
     - ^release-future$
-    - ^release-sc2$
     decorate: true
     path_alias: github.com/IBM/ibm-account-iam-operator 
     rerun_command: /test check-ibm-account-iam-operator 
@@ -26,7 +25,6 @@ presubmits:
     branches:
     - ^main$
     - ^release-future$
-    - ^release-sc2$
     decorate: true
     path_alias: github.com/IBM/ibm-account-iam-operator
     rerun_command: /test test-ibm-account-iam-operator-amd64
@@ -47,7 +45,6 @@ presubmits:
     branches:
     - ^main$
     - ^release-future$
-    - ^release-sc2$
     decorate: true
     path_alias: github.com/IBM/ibm-account-iam-operator
     rerun_command: /test test-ibm-account-iam-operator-ppc64le
@@ -68,7 +65,6 @@ presubmits:
     branches:
     - ^main$
     - ^release-future$
-    - ^release-sc2$
     decorate: true
     path_alias: github.com/IBM/ibm-account-iam-operator
     rerun_command: /test test-ibm-account-iam-operator-s390x
@@ -85,72 +81,11 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?test(?:.*?)?$'
 postsubmits:
   IBM/ibm-account-iam-operator:
-  - name: image-ibm-account-iam-operator-amd64-postsubmit
-    cluster: default
-    branches:
-    - ^main$
-    - ^release-future$
-    - ^release-sc2$
-    decorate: true
-    labels:
-      preset-service-account: "true"
-    path_alias: github.com/IBM/ibm-account-iam-operator
-    spec:
-      containers:
-      - command:
-        - entrypoint
-        - make
-        - build-push-image
-        image: quay.io/cicdtest/build-tool:v20240711-d1227e929
-        name: ""
-        securityContext:
-          privileged: true
-  - name: image-ibm-account-iam-operator-ppc64le-postsubmit
-    cluster: ppc64le
-    branches:
-    - ^main$
-    - ^release-future$
-    - ^release-sc2$
-    decorate: true
-    labels:
-      preset-service-account: "true"
-    path_alias: github.com/IBM/ibm-account-iam-operator
-    spec:
-      containers:
-      - command:
-        - entrypoint
-        - make
-        - build-push-image
-        image: quay.io/cicdtest/build-tool:v20240711-d1227e929
-        name: ""
-        securityContext:
-          privileged: true
-  - name: image-ibm-account-iam-operator-s390x-postsubmit
-    cluster: s390x
-    branches:
-    - ^main$
-    - ^release-future$
-    - ^release-sc2$
-    decorate: true
-    labels:
-      preset-service-account: "true"
-    path_alias: github.com/IBM/ibm-account-iam-operator
-    spec:
-      containers:
-      - command:
-        - entrypoint
-        - make
-        - build-push-image
-        image: quay.io/cicdtest/build-tool:v20240711-d1227e929
-        name: ""
-        securityContext:
-          privileged: true
   - name: multiarch-image-ibm-account-iam-operator-postsubmit
     cluster: default
     branches:
     - ^main$
     - ^release-future$
-    - ^release-sc2$
     decorate: true
     labels:
       preset-service-account: "true"
@@ -160,7 +95,7 @@ postsubmits:
       - command:
         - entrypoint
         - make
-        - multiarch-image
+        - docker-build-push-prod
         image: quay.io/cicdtest/build-tool:v20240711-d1227e929
         name: ""
         securityContext:
