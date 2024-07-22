@@ -131,7 +131,7 @@ tide:
     - IBM/ibm-cert-manager-operator
     - IBM/ibm-commonui-operator
     - IBM/ibm-common-service-operator
-    - IBM/ibm-account-iam-operator
+    - IBM/ibm-user-management-operator
     - IBM/ibm-namespace-scope-operator
     - IBM/ibm-common-service-webhook
     - IBM/ibm-crossplane-operator

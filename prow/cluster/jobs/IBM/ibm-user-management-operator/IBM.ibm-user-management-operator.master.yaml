@@ -1,14 +1,14 @@
 presubmits:
-  IBM/ibm-account-iam-operator:
-  - name: check-ibm-account-iam-operator 
+  IBM/ibm-user-management-operator:
+  - name: check-ibm-user-management-operator 
     cluster: default
     always_run: true
     branches:
     - ^main$
     - ^release-future$
     decorate: true
-    path_alias: github.com/IBM/ibm-account-iam-operator 
-    rerun_command: /test check-ibm-account-iam-operator 
+    path_alias: github.com/IBM/ibm-user-management-operator 
+    rerun_command: /test check-ibm-user-management-operator 
     spec:
       containers:
       - command:
@@ -19,15 +19,15 @@ presubmits:
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?check(?:.*?)?$'
-  - name: test-ibm-account-iam-operator-amd64
+  - name: test-ibm-user-management-operator-amd64
     cluster: default
     always_run: true
     branches:
     - ^main$
     - ^release-future$
     decorate: true
-    path_alias: github.com/IBM/ibm-account-iam-operator
-    rerun_command: /test test-ibm-account-iam-operator-amd64
+    path_alias: github.com/IBM/ibm-user-management-operator
+    rerun_command: /test test-ibm-user-management-operator-amd64
     spec:
       containers:
       - command:
@@ -39,15 +39,15 @@ presubmits:
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?test(?:.*?)?$'
-  - name: test-ibm-account-iam-operator-ppc64le
+  - name: test-ibm-user-management-operator-ppc64le
     cluster: ppc64le
     always_run: true
     branches:
     - ^main$
     - ^release-future$
     decorate: true
-    path_alias: github.com/IBM/ibm-account-iam-operator
-    rerun_command: /test test-ibm-account-iam-operator-ppc64le
+    path_alias: github.com/IBM/ibm-user-management-operator
+    rerun_command: /test test-ibm-user-management-operator-ppc64le
     spec:
       containers:
       - command:
@@ -59,15 +59,15 @@ presubmits:
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?test(?:.*?)?$'
-  - name: test-ibm-account-iam-operator-s390x
+  - name: test-ibm-user-management-operator-s390x
     cluster: s390x
     always_run: true
     branches:
     - ^main$
     - ^release-future$
     decorate: true
-    path_alias: github.com/IBM/ibm-account-iam-operator
-    rerun_command: /test test-ibm-account-iam-operator-s390x
+    path_alias: github.com/IBM/ibm-user-management-operator
+    rerun_command: /test test-ibm-user-management-operator-s390x
     spec:
       containers:
       - command:
@@ -80,8 +80,8 @@ presubmits:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?test(?:.*?)?$'
 postsubmits:
-  IBM/ibm-account-iam-operator:
-  - name: multiarch-image-ibm-account-iam-operator-postsubmit
+  IBM/ibm-user-management-operator:
+  - name: multiarch-image-ibm-user-management-operator-postsubmit
     cluster: default
     branches:
     - ^main$
@@ -89,7 +89,7 @@ postsubmits:
     decorate: true
     labels:
       preset-service-account: "true"
-    path_alias: github.com/IBM/ibm-account-iam-operator
+    path_alias: github.com/IBM/ibm-user-management-operator
     spec:
       containers:
       - command:
