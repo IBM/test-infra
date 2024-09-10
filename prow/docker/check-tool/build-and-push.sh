@@ -14,6 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Login to the Artifactory golang directory
+KUBECTL=$(command -v kubectl)
+DOCKER_USERNAME=$(${KUBECTL} -n default get secret artifactory-cred -o jsonpath='{.data.username}' | base64 --decode)
+DOCKER_PASSWORD=$(${KUBECTL} -n default get secret artifactory-cred -o jsonpath='{.data.password}' | base64 --decode)
+docker login docker-na-public.artifactory.swg-devops.com -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}"
+
 set -eux
 
 IMAGE_REPO=${IMAGE_REPO:-"quay.io/multicloudlab"}
