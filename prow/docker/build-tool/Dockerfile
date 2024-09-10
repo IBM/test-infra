@@ -4,14 +4,14 @@
 
 # Use golang as the binary_tools_context
 
-FROM golang:1.22.5-bullseye as binary_tools_context
+FROM golang:1.23.0-bullseye as binary_tools_context
 
 ARG ARCH=amd64
 
 # Pinned versions of stuff
 ENV CONTROLLER_GEN_VERSION=v0.4.0
 ENV GOIMPORTS_VERSION=379209517ffe
-ENV GOLANGCI_LINT_VERSION=v1.51.2
+ENV GOLANGCI_LINT_VERSION=v1.60.1
 ENV HELM_VERSION=v3.4.1
 ENV KUBECTL_VERSION=v1.22.17
 ENV KUBEBUILDER_VERSION=2.3.2
