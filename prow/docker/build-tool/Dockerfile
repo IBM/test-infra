@@ -4,7 +4,7 @@
 
 # Use golang as the binary_tools_context
 
-FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/golang:1.23.1-bullseye as binary_tools_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/golang:1.23.2-bookworm as binary_tools_context
 
 ARG ARCH=amd64
 
