@@ -9,12 +9,7 @@ FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-doc
 ARG ARCH=amd64
 
 # TEST INFO, REMOVE
-RUN apt-key list || true
-RUN ls -l /etc/apt/trusted*
-RUN md5sum /etc/apt/trusted.gpg.d/*
-RUN md5sum /usr/share/keyrings/* 
-RUN apt-get install debian-keyring debian-archive-keyring
-RUN apt-get update
+RUN sudo apt-get update
 
 # Pinned versions of stuff
 ENV CONTROLLER_GEN_VERSION=v0.4.0
