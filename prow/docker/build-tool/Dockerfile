@@ -9,10 +9,7 @@ FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-doc
 ARG ARCH=amd64
 
 # TEST INFO, REMOVE
-RUN ls -l /bin/sh
-RUN dpkg --verify
-RUN ls -l /bin/dash
-RUN apt-get update
+RUN (apt-get update)
 RUN exit 1
 
 # Pinned versions of stuff
