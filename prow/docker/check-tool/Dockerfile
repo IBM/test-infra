@@ -4,9 +4,10 @@
 
 # Use golang as the binary_tools_context
 
-FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/golang:1.23.2-bookworm as binary_tools_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/golang:1.23.0-bullseye as binary_tools_context
 
 # Pinned versions of stuff
+ENV GO_VERSION=1.23.2
 ENV GOIMPORTS_VERSION=379209517ffe
 ENV GOLANGCI_LINT_VERSION=v1.60.1
 ENV HADOLINT_VERSION=v1.23.0
@@ -18,7 +19,6 @@ ENV GO111MODULE=on
 ENV GOPROXY=https://proxy.golang.org
 
 WORKDIR /tmp
-ENV GOPATH=/tmp/go
 
 ENV OUTDIR=/out
 RUN mkdir -p ${OUTDIR}/usr/bin
@@ -35,7 +35,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     unzip \
     xz-utils
 
+# Special code to swap go version
+RUN go install golang.org/dl/go${GO_VERSION}@latest
+RUN /go/bin/go${GO_VERSION} download
+RUN rm -rf /usr/local/go
+RUN mv /root/sdk/go${GO_VERSION} /usr/local/go
+
 # Build and install a bunch of Go tools
+ENV GOPATH=/tmp/go
 RUN go install -ldflags="-s -w" golang.org/x/tools/cmd/goimports@${GOIMPORTS_VERSION}
 RUN go install -ldflags="-s -w" github.com/golangci/golangci-lint/cmd/golangci-lint@${GOLANGCI_LINT_VERSION}
 
