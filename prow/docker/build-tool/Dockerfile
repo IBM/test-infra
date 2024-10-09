@@ -9,7 +9,10 @@ FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-doc
 ARG ARCH=amd64
 
 # TEST INFO, REMOVE
-RUN (apt-get update)
+RUN cat /etc/apt/sources.list.d/*
+RUN ls -l /usr/share/keyrings/debian-archive-keyring.gpg
+RUN md5sum md5sum /usr/share/keyrings/debian-archive-keyring.gpg
+RUN apt-get update
 RUN exit 1
 
 # Pinned versions of stuff
