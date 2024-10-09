@@ -9,8 +9,9 @@ FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-doc
 ARG ARCH=amd64
 
 # TEST INFO, REMOVE
-RUN gpg --no-default-keyring --keyring /usr/share/keyrings/debian-archive-keyring.gpg --verify /var/lib/apt/lists/deb.debian.org_debian_dists_bookworm_InRelease
 RUN apt-config dump
+RUN ls /var/lib/ && ls /var/lib/apt && ls /var/lib/apt/lists
+RUN apt-get -o Debug::Acquire::gpgv=1 -o Dir::Etc::TrustedParts=/etc/apt/trusted.gpg.d/ -o Dir::Etc::Trusted=/dev/null update
 RUN exit 1
 
 # Pinned versions of stuff
