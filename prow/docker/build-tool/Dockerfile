@@ -8,6 +8,16 @@ FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-doc
 
 ARG ARCH=amd64
 
+# TEST INFO, REMOVE
+RUN uname -a
+RUN ls /etc/apt/ && ls /etc/apt/sources.list.d/ && cat /etc/apt/sources.list.d/*
+RUN apt list debian-keyring debian-archive-keyring
+RUN apt-key list && ls -l /etc/apt/trusted*
+RUN md5sum /etc/apt/trusted.gpg.d/*
+RUN md5sum /usr/share/keyrings/* 
+RUN apt-get install debian-keyring debian-archive-keyring
+RUN apt-get update
+
 # Pinned versions of stuff
 ENV CONTROLLER_GEN_VERSION=v0.4.0
 ENV GOIMPORTS_VERSION=379209517ffe
