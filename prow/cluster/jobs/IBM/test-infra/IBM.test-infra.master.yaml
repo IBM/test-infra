@@ -84,20 +84,4 @@ presubmits:
         securityContext:
           privileged: true
     trigger: '(?m)^/test (?:.*? )?build(?:.*?)?$'
-  - name: build-tool-image-amd64-presubmit
-    cluster: default
-    decorate: true
-    labels:
-      preset-tool-image-push: "true"
-    branches:
-    - ^master$
-    run_if_changed: 'prow/docker/build-tool/*'
-    spec:
-      containers:
-      - image: quay.io/cicdtest/build-tool:v20240910-14e2f7184
-        command:
-        - entrypoint
-        - make
-        - build-tool-image
-        securityContext:
-          privileged: true
+
