@@ -9,7 +9,8 @@ FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-doc
 ARG ARCH=amd64
 
 # TEST INFO, REMOVE
-RUN apt update
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F8D2585B8783D481
+RUN apt-get update
 RUN exit 1
 
 # Pinned versions of stuff
