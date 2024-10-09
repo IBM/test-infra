@@ -9,7 +9,11 @@ FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-doc
 ARG ARCH=amd64
 
 # TEST INFO, REMOVE
-RUN sudo apt-get update
+RUN mv -i /etc/apt/trusted.gpg.d/debian-archive-*.asc  /root/
+RUN ln -s /usr/share/keyrings/debian-archive-* /etc/apt/trusted.gpg.d/
+RUN apt-get update
+RUN md5sum /etc/apt/trusted.gpg.d/*
+RUN exit 1
 
 # Pinned versions of stuff
 ENV CONTROLLER_GEN_VERSION=v0.4.0
