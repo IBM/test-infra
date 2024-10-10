@@ -4,17 +4,10 @@
 
 # Use golang as the binary_tools_context
 
+
 FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/golang:1.23.0-bullseye as binary_tools_context
 
 ARG ARCH=amd64
-
-# TEST INFO, REMOVE
-RUN cat /etc/apt/sources.list.d/*
-RUN apt-get install debian-keyring
-RUN ls -l /usr/share/keyrings/debian-archive-keyring.gpg
-RUN md5sum md5sum /usr/share/keyrings/debian-archive-keyring.gpg
-RUN apt-get update
-RUN exit 1
 
 # Pinned versions of stuff
 ENV GO_VERSION=1.23.2

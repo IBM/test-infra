@@ -4,6 +4,7 @@
 
 # Use golang as the binary_tools_context
 
+
 FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/golang:1.23.0-bullseye as binary_tools_context
 
 # Pinned versions of stuff
