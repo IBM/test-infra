@@ -12,7 +12,7 @@ postsubmits:
     run_if_changed: 'prow/docker/check-tool/*'
     spec:
       containers:
-      - image: quay.io/cicdtest/build-tool:v20240910-14e2f7184
+      - image: quay.io/cicdtest/build-tool:v20241010-a60b211fe
         command:
         - entrypoint
         - make
@@ -29,7 +29,7 @@ postsubmits:
     run_if_changed: 'prow/docker/build-tool/*'
     spec:
       containers:
-      - image: quay.io/cicdtest/build-tool:v20240910-14e2f7184
+      - image: quay.io/cicdtest/build-tool:v20241010-a60b211fe
         command:
         - entrypoint
         - make
@@ -46,7 +46,7 @@ postsubmits:
     run_if_changed: 'prow/docker/build-tool/*'
     spec:
       containers:
-      - image: quay.io/cicdtest/build-tool:v20240910-14e2f7184
+      - image: quay.io/cicdtest/build-tool:v20241010-a60b211fe
         command:
         - entrypoint
         - make
@@ -63,7 +63,7 @@ postsubmits:
     run_if_changed: 'prow/docker/build-tool/*'
     spec:
       containers:
-      - image: quay.io/cicdtest/build-tool:v20240910-14e2f7184
+      - image: quay.io/cicdtest/build-tool:v20241010-a60b211fe
         command:
         - entrypoint
         - make
@@ -80,7 +80,7 @@ postsubmits:
     run_if_changed: 'prow/docker/build-tool/*'
     spec:
       containers:
-      - image: quay.io/cicdtest/build-tool:v20240910-14e2f7184
+      - image: quay.io/cicdtest/build-tool:v20241010-a60b211fe
         command:
         - entrypoint
         - make
