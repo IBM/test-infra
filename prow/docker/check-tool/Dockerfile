@@ -8,7 +8,7 @@
 FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/golang:1.23.0-bullseye as binary_tools_context
 
 # Pinned versions of stuff
-ENV GO_VERSION=1.23.2
+ENV GO_VERSION=1.23.3
 ENV GOIMPORTS_VERSION=379209517ffe
 ENV GOLANGCI_LINT_VERSION=v1.60.1
 ENV HADOLINT_VERSION=v1.23.0
