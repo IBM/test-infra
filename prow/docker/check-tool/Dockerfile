@@ -118,6 +118,7 @@ ENV FPM_VERSION=1.11.0
 ENV HTMLPROOFER_VERSION=3.12.0
 ENV LICENSEE_VERSION=9.11.0
 ENV MDL_VERSION=0.5.0
+ENV DEBIAN_FRONTEND=noninteractive
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get -y dist-upgrade && apt-get install -y --no-install-recommends \
@@ -178,6 +179,8 @@ RUN pip3 install yamllint==${YAMLLINT_VERSION}
 #############
 
 FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as base_os_context
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get -y --no-install-recommends install \

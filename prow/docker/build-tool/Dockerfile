@@ -97,7 +97,7 @@ RUN rm -fr /usr/local/go/bin/gofmt
 # Base OS
 #############
 
-FROM FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as base_os_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as base_os_context
 
 ENV DOCKER_VERSION=18.06.3~ce~3-0~ubuntu
 
