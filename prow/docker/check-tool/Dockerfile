@@ -79,11 +79,11 @@ RUN rm -fr /usr/local/go/bin/gofmt
 # Nodejs
 #############
 
-FROM ubuntu:bionic as nodejs_tools_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as nodejs_tools_context
 
 # Pinned versions of stuff we pull in
 ENV MARKDOWN_SPELLCHECK_VERSION=v1.3.1
-ENV NODEJS_VERSION=12.8.0
+ENV NODEJS_VERSION=20.18.0
 ENV SASS_LINT_VERSION=v1.13.1
 ENV SASS_VERSION=v1.23.7
 ENV TSLINT_VERSION=v5.20.0
@@ -110,7 +110,7 @@ RUN rm -rf /usr/local/share
 # Ruby
 #############
 
-FROM ubuntu:bionic as ruby_tools_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as ruby_tools_context
 
 # Pinned versions of stuff we pull in
 ENV AWESOMEBOT_VERSION=1.19.1
@@ -150,7 +150,7 @@ RUN gem install --no-wrappers --no-document fpm -v ${FPM_VERSION}
 # Python
 ##############
 
-FROM ubuntu:bionic as python_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as python_context
 
 # Pinned versions of stuff we pull in
 ENV AUTOPEP8_VERSION=1.4.4
@@ -177,7 +177,7 @@ RUN pip3 install yamllint==${YAMLLINT_VERSION}
 # Base OS
 #############
 
-FROM ubuntu:bionic as base_os_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as base_os_context
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get -y --no-install-recommends install \
