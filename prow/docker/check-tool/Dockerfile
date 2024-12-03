@@ -282,3 +282,4 @@ RUN chmod 777 ${HOME}/go && \
 RUN git config --global url."git@github.ibm.com:".insteadOf "https://github.ibm.com/"
 
 WORKDIR ${HOME}
+
