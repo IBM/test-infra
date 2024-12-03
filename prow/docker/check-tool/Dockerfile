@@ -163,11 +163,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     libc-dev \
     pkg-config \
-    python3.7 \
-    python3-distutils
+    python3.8 \
+    python3-distutils \
+    python3-pip
 
 # installing pip in this manner to get pip3.7 and not pip3.6
-RUN curl https://bootstrap.pypa.io/pip/3.7/get-pip.py -o get-pip.py && python3.7 get-pip.py
+# RUN curl https://bootstrap.pypa.io/pip/3.7/get-pip.py -o get-pip.py && python3.7 get-pip.py
 
 # Install Python stuff
 # hadolint ignore=DL3013
@@ -194,7 +195,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     git \
     ssh \
     make \
-    python3.7 \
+    python3.8 \
     wget \
     jq \
     zip \
@@ -282,4 +283,3 @@ RUN chmod 777 ${HOME}/go && \
 RUN git config --global url."git@github.ibm.com:".insteadOf "https://github.ibm.com/"
 
 WORKDIR ${HOME}
-

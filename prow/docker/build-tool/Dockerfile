@@ -32,6 +32,8 @@ RUN mkdir -p ${OUTDIR}/usr/local
 RUN mkdir -p ${OUTDIR}/usr/local/kubebuilder
 RUN mkdir -p ${OUTDIR}/usr/lib
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-transport-https \
@@ -100,6 +102,7 @@ RUN rm -fr /usr/local/go/bin/gofmt
 FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as base_os_context
 
 ENV DOCKER_VERSION=18.06.3~ce~3-0~ubuntu
+ENV DEBIAN_FRONTEND=noninteractive
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get -y --no-install-recommends install \
@@ -113,7 +116,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     git \
     ssh \
     make \
-    python3.7 \
+    python3.8 \
     wget \
     jq \
     zip \
@@ -212,4 +215,3 @@ EXPOSE 2375
 WORKDIR ${HOME}
 
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
-
