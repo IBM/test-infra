@@ -118,6 +118,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     jq \
     zip \
     unzip \
+    docker.io \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
@@ -132,13 +133,13 @@ RUN echo curl https://sdk.cloud.google.com > /tmp/install_gcloud_sdk
 # RUN ${CLOUDSDK_INSTALL_DIR}/google-cloud-sdk/bin/gcloud components install gke-gcloud-auth-plugin --quiet || true
 
 # Install docker
-ADD https://download.docker.com/linux/ubuntu/gpg /tmp/docker-key
-RUN apt-key add /tmp/docker-key
-RUN add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-RUN apt-get update && apt-get -y install --no-install-recommends \
-    docker-ce="${DOCKER_VERSION}" \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+# ADD https://download.docker.com/linux/ubuntu/gpg /tmp/docker-key
+# RUN apt-key add /tmp/docker-key
+# RUN add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+# RUN apt-get update && apt-get -y install --no-install-recommends \
+#     docker-ce="${DOCKER_VERSION}" \
+#  && apt-get clean \
+#  && rm -rf /var/lib/apt/lists/*
 
 # Clean up unused stuff for the final image
 RUN rm -rf /var/lib/apt/lists/*
