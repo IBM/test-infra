@@ -79,11 +79,11 @@ RUN rm -fr /usr/local/go/bin/gofmt
 # Nodejs
 #############
 
-FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as nodejs_tools_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:bionic as nodejs_tools_context
 
 # Pinned versions of stuff we pull in
 ENV MARKDOWN_SPELLCHECK_VERSION=v1.3.1
-ENV NODEJS_VERSION=20.18.0
+ENV NODEJS_VERSION=12.8.0
 ENV SASS_LINT_VERSION=v1.13.1
 ENV SASS_VERSION=v1.23.7
 ENV TSLINT_VERSION=v5.20.0
@@ -110,7 +110,7 @@ RUN rm -rf /usr/local/share
 # Ruby
 #############
 
-FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as ruby_tools_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:bionic as ruby_tools_context
 
 # Pinned versions of stuff we pull in
 ENV AWESOMEBOT_VERSION=1.19.1
@@ -118,7 +118,6 @@ ENV FPM_VERSION=1.11.0
 ENV HTMLPROOFER_VERSION=3.12.0
 ENV LICENSEE_VERSION=9.11.0
 ENV MDL_VERSION=0.5.0
-ENV DEBIAN_FRONTEND=noninteractive
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get -y dist-upgrade && apt-get install -y --no-install-recommends \
@@ -151,7 +150,7 @@ RUN gem install --no-wrappers --no-document fpm -v ${FPM_VERSION}
 # Python
 ##############
 
-FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as python_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:bionic as python_context
 
 # Pinned versions of stuff we pull in
 ENV AUTOPEP8_VERSION=1.4.4
@@ -163,12 +162,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     libc-dev \
     pkg-config \
-    python3.8 \
-    python3-distutils \
-    python3-pip
+    python3.7 \
+    python3-distutils
 
 # installing pip in this manner to get pip3.7 and not pip3.6
-# RUN curl https://bootstrap.pypa.io/pip/3.7/get-pip.py -o get-pip.py && python3.7 get-pip.py
+RUN curl https://bootstrap.pypa.io/pip/3.7/get-pip.py -o get-pip.py && python3.7 get-pip.py
 
 # Install Python stuff
 # hadolint ignore=DL3013
@@ -179,9 +177,7 @@ RUN pip3 install yamllint==${YAMLLINT_VERSION}
 # Base OS
 #############
 
-FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as base_os_context
-
-ENV DEBIAN_FRONTEND=noninteractive
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:bionic as base_os_context
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get -y --no-install-recommends install \
@@ -195,7 +191,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     git \
     ssh \
     make \
-    python3.8 \
+    python3.7 \
     wget \
     jq \
     zip \
@@ -283,3 +279,4 @@ RUN chmod 777 ${HOME}/go && \
 RUN git config --global url."git@github.ibm.com:".insteadOf "https://github.ibm.com/"
 
 WORKDIR ${HOME}
+

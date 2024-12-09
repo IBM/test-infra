@@ -32,8 +32,6 @@ RUN mkdir -p ${OUTDIR}/usr/local
 RUN mkdir -p ${OUTDIR}/usr/local/kubebuilder
 RUN mkdir -p ${OUTDIR}/usr/lib
 
-ENV DEBIAN_FRONTEND=noninteractive
-
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-transport-https \
@@ -99,10 +97,9 @@ RUN rm -fr /usr/local/go/bin/gofmt
 # Base OS
 #############
 
-FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:focal as base_os_context
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/ubuntu:bionic as base_os_context
 
 ENV DOCKER_VERSION=18.06.3~ce~3-0~ubuntu
-ENV DEBIAN_FRONTEND=noninteractive
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get -y --no-install-recommends install \
@@ -116,12 +113,11 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     git \
     ssh \
     make \
-    python3.8 \
+    python3.7 \
     wget \
     jq \
     zip \
     unzip \
-    docker.io \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
@@ -136,13 +132,13 @@ RUN echo curl https://sdk.cloud.google.com > /tmp/install_gcloud_sdk
 # RUN ${CLOUDSDK_INSTALL_DIR}/google-cloud-sdk/bin/gcloud components install gke-gcloud-auth-plugin --quiet || true
 
 # Install docker
-# ADD https://download.docker.com/linux/ubuntu/gpg /tmp/docker-key
-# RUN apt-key add /tmp/docker-key
-# RUN add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-# RUN apt-get update && apt-get -y install --no-install-recommends \
-#     docker-ce="${DOCKER_VERSION}" \
-#  && apt-get clean \
-#  && rm -rf /var/lib/apt/lists/*
+ADD https://download.docker.com/linux/ubuntu/gpg /tmp/docker-key
+RUN apt-key add /tmp/docker-key
+RUN add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+RUN apt-get update && apt-get -y install --no-install-recommends \
+    docker-ce="${DOCKER_VERSION}" \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 # Clean up unused stuff for the final image
 RUN rm -rf /var/lib/apt/lists/*
@@ -216,3 +212,4 @@ EXPOSE 2375
 WORKDIR ${HOME}
 
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
+
