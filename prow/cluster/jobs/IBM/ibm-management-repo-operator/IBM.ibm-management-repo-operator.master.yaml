@@ -32,7 +32,7 @@ presubmits:
       - command:
         - make
         - check
-        image: quay.io/cicdtest/check-tool:v20250117-d85ec7e61
+        image: quay.io/cicdtest/check-tool:v20250205-9be18dfd5
         name: ""
         securityContext:
           privileged: true
@@ -49,7 +49,7 @@ postsubmits:
       - command:
         - make
         - check
-        image: quay.io/cicdtest/check-tool:v20250117-d85ec7e61
+        image: quay.io/cicdtest/check-tool:v20250205-9be18dfd5
         name: ""
         securityContext:
           privileged: true
