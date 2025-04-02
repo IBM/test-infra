@@ -10,7 +10,7 @@ FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-doc
 ARG ARCH=amd64
 
 # Pinned versions of stuff
-ENV GO_VERSION=1.23.7
+ENV GO_VERSION=1.23.8
 ENV CONTROLLER_GEN_VERSION=v0.4.0
 ENV GOIMPORTS_VERSION=379209517ffe
 ENV GOLANGCI_LINT_VERSION=v1.60.1
