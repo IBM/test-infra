@@ -5,6 +5,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-sc2$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -27,6 +28,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-sc2$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -50,6 +52,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-sc2$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -73,6 +76,7 @@ presubmits:
     always_run: true
     branches:
     - ^master$
+    - ^release-sc2$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -97,6 +101,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
+    - ^release-sc2$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -119,6 +124,7 @@ postsubmits:
     cluster: ppc64le
     branches:
     - ^master$
+    - ^release-sc2$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -141,6 +147,7 @@ postsubmits:
     cluster: s390x
     branches:
     - ^master$
+    - ^release-sc2$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -163,6 +170,7 @@ postsubmits:
     cluster: default
     branches:
     - ^master$
+    - ^release-sc2$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
