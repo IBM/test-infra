@@ -13,7 +13,7 @@ presubmits:
       - command:
         - make
         - check
-        image: quay.io/cicdtest/check-tool:v20250507-7dfc94eec
+        image: quay.io/cicdtest/check-tool:v20250606-f2ed23c2c
         name: ""
         securityContext:
           privileged: true
@@ -107,7 +107,7 @@ postsubmits:
       - command:
         - make
         - coverage
-        image: quay.io/cicdtest/check-tool:v20250507-7dfc94eec
+        image: quay.io/cicdtest/check-tool:v20250606-f2ed23c2c
         name: ""
         env:
         - name: CODECOV_TOKEN
