@@ -2,7 +2,6 @@ presubmits:
   IBM/ibm-iam-operator:
   - name: build_ibm-iam-operator
     branches:
-    - ^master$
     - ^release-ltsr$
     - ^release-cd$
     - ^release-efix$
@@ -26,7 +25,6 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
   - name: check_ibm-iam-operator
     branches:
-    - ^master$
     - ^release-ltsr$
     - ^release-cd$
     - ^release-efix$
@@ -49,7 +47,6 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?check(?: .*?)?$'
   - name: test_ibm-iam-operator
     branches:
-    - ^master$
     - ^release-ltsr$
     - ^release-cd$
     - ^release-efix$
@@ -76,7 +73,6 @@ postsubmits:
   IBM/ibm-iam-operator:
   - name: check_ibm-iam-operator_postsubmit
     branches:
-    - ^master$
     - ^release-ltsr$
     - ^release-cd$
     - ^release-efix$
@@ -96,7 +92,6 @@ postsubmits:
           privileged: true
   - name: test_ibm-iam-operator_postsubmit
     branches:
-    - ^master$
     - ^release-ltsr$
     - ^release-cd$
     - ^release-efix$
@@ -117,7 +112,6 @@ postsubmits:
           privileged: true
   - name: build_ibm-iam-operator_postsubmit
     branches:
-    - ^master$
     - ^release-ltsr$
     - ^release-cd$
     - ^release-efix$
@@ -138,7 +132,6 @@ postsubmits:
           privileged: true
   - name: images_ibm-iam-operator_postsubmit
     branches:
-    - ^master$
     - ^release-ltsr$
     - ^release-cd$
     - ^release-efix$
