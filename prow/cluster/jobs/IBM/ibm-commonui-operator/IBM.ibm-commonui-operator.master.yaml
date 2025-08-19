@@ -3,7 +3,6 @@ presubmits:
   - name: check_ibm-commonui-operator
     cluster: default
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -26,7 +25,6 @@ presubmits:
   - name: test_ibm-commonui-operator
     cluster: default
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -50,7 +48,6 @@ presubmits:
   - name: build_ibm-commonui-operator
     cluster: default
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -74,7 +71,6 @@ presubmits:
   - name: build_ibm-commonui-operator-ppc64le
     cluster: ppc64le
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -98,7 +94,6 @@ presubmits:
   - name: build_ibm-commonui-operator-s390x
     cluster: s390x
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -124,7 +119,6 @@ postsubmits:
   - name: build_ibm-commonui-operator_postsubmit
     cluster: default
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -145,7 +139,6 @@ postsubmits:
   - name: build_ibm-commonui-operator-ppc64le_postsubmit
     cluster: ppc64le
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -166,7 +159,6 @@ postsubmits:
   - name: build_ibm-commonui-operator-s390x_postsubmit
     cluster: s390x
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -187,7 +179,6 @@ postsubmits:
   - name: image_ibm-commonui-operator_postsubmit
     cluster: default
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -210,7 +201,6 @@ postsubmits:
   - name: image_ibm-commonui-operator-ppc64le_postsubmit
     cluster: ppc64le
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -233,7 +223,6 @@ postsubmits:
   - name: image_ibm-commonui-operator-s390x_postsubmit
     cluster: s390x
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
@@ -256,7 +245,6 @@ postsubmits:
   - name: multiarch_image_ibm-commonui-operator_postsubmit
     cluster: default
     branches:
-    - ^master$
     - ^release-future$
     - ^release-efix$
     - ^release-eus$
