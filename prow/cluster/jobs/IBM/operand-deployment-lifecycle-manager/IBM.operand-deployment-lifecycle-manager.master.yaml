@@ -4,10 +4,6 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-1.13$
     - ^release-ltsr$
@@ -28,10 +24,6 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-1.13$
     - ^release-ltsr$
@@ -53,10 +45,6 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-1.13$
     - ^release-ltsr$
@@ -81,10 +69,6 @@ postsubmits:
   - name: image-operand-deployment-lifecycle-manager-amd64-postsubmit
     cluster: default
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-1.13$
     - ^release-ltsr$
@@ -105,10 +89,6 @@ postsubmits:
   - name: image-operand-deployment-lifecycle-manager-ppc64le-postsubmit
     cluster: ppc64le
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-1.13$
     - ^release-ltsr$
@@ -129,10 +109,6 @@ postsubmits:
   - name: image-operand-deployment-lifecycle-manager-s390x-postsubmit
     cluster: s390x
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-1.13$
     - ^release-ltsr$
@@ -153,10 +129,6 @@ postsubmits:
   - name: multiarch-image-operand-deployment-lifecycle-manager-postsubmit
     cluster: default
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-1.13$
     - ^release-ltsr$

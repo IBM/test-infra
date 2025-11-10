@@ -4,7 +4,6 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
     - ^release-future$
     decorate: true
     path_alias: github.com/IBM/ibm-user-management-operator
@@ -23,7 +22,6 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
     - ^release-future$
     decorate: true
     path_alias: github.com/IBM/ibm-user-management-operator
@@ -43,7 +41,6 @@ presubmits:
     cluster: ppc64le
     always_run: true
     branches:
-    - ^master$
     - ^release-future$
     decorate: true
     path_alias: github.com/IBM/ibm-user-management-operator
@@ -63,7 +60,6 @@ presubmits:
     cluster: s390x
     always_run: true
     branches:
-    - ^master$
     - ^release-future$
     decorate: true
     path_alias: github.com/IBM/ibm-user-management-operator
@@ -84,7 +80,6 @@ postsubmits:
   - name: image-ibm-user-management-operator-amd64-postsubmit
     cluster: default
     branches:
-    - ^master$
     - ^release-future$
     decorate: true
     labels:
@@ -103,7 +98,6 @@ postsubmits:
   - name: image-ibm-user-management-operator-ppc64le-postsubmit
     cluster: ppc64le
     branches:
-    - ^master$
     - ^release-future$
     decorate: true
     labels:
@@ -122,7 +116,6 @@ postsubmits:
   - name: image-ibm-user-management-operator-s390x-postsubmit
     cluster: s390x
     branches:
-    - ^master$
     - ^release-future$
     decorate: true
     labels:
@@ -141,7 +134,6 @@ postsubmits:
   - name: multiarch-image-ibm-user-management-operator-postsubmit
     cluster: default
     branches:
-    - ^master$
     - ^release-future$
     decorate: true
     labels:

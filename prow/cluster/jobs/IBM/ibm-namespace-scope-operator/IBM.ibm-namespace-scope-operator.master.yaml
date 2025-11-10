@@ -4,10 +4,6 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-ltsr$
     decorate: true
@@ -27,10 +23,6 @@ presubmits:
     cluster: default
     always_run: true
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-ltsr$
     decorate: true
@@ -51,10 +43,6 @@ presubmits:
     cluster: ppc64le
     always_run: true
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-ltsr$
     decorate: true
@@ -75,10 +63,6 @@ presubmits:
     cluster: s390x
     always_run: true
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-ltsr$
     decorate: true
@@ -100,10 +84,6 @@ postsubmits:
   - name: image-ibm-namespace-scope-operator-amd64-postsubmit
     cluster: default
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-ltsr$
     decorate: true
@@ -123,10 +103,6 @@ postsubmits:
   - name: image-ibm-namespace-scope-operator-ppc64le-postsubmit
     cluster: ppc64le
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-ltsr$
     decorate: true
@@ -146,10 +122,6 @@ postsubmits:
   - name: image-ibm-namespace-scope-operator-s390x-postsubmit
     cluster: s390x
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-ltsr$
     decorate: true
@@ -169,10 +141,6 @@ postsubmits:
   - name: multiarch-image-ibm-namespace-scope-operator-postsubmit
     cluster: default
     branches:
-    - ^master$
-    - ^release-sc2$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-ltsr$
     decorate: true

@@ -2,9 +2,6 @@ presubmits:
   IBM/ibm-cert-manager-operator:
   - name: build_ibm-cert-manager-operator
     branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
@@ -25,9 +22,6 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?build(?: .*?)?$'
   - name: check_ibm-cert-manager-operator
     branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
@@ -47,9 +41,6 @@ presubmits:
     trigger: '(?m)^/test (?:.*? )?check(?: .*?)?$'
   - name: test_ibm-cert-manager-operator
     branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
@@ -73,9 +64,6 @@ postsubmits:
   IBM/ibm-cert-manager-operator:
   - name: check_ibm-cert-manager-operator_postsubmit
     branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
@@ -92,9 +80,6 @@ postsubmits:
           privileged: true
   - name: test_ibm-cert-manager-operator_postsubmit
     branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
@@ -112,9 +97,6 @@ postsubmits:
           privileged: true
   - name: build_ibm-cert-manager-operator_postsubmit
     branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
@@ -132,9 +114,6 @@ postsubmits:
           privileged: true
   - name: images_ibm-cert-manager-operator_postsubmit
     branches:
-    - ^master$
-    - ^release-future$
-    - ^release-efix$
     - ^release-eus$
     - ^release-k$
     - ^release-ltsr$
